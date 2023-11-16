@@ -72,16 +72,16 @@
 				</div> -->
 			</div>
 		</div>
-		<pcContentfooter></pcContentfooter>
+		<pcContentFooter></pcContentFooter>
 	</div>
 
 </template>
 
 <script>
-	import pcContentfooter from '@/layout/components/pcContentfooter'
+	import pcContentFooter from '@/layout/components/pcContentFooter'
 	export default {
 		components: {
-			pcContentfooter,
+			pcContentFooter,
 		},
 		data() {
 			return {
