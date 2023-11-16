@@ -1,0 +1,149 @@
+$size-map: 5 10 15;
+$width-map: 50 75 100;
+$percent-map: 50 100;
+$font-sizes: 10 11 12 13 14;
+
+$primary-color: #409eff;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$success-color: #67c23a;
+$info-color: #909399;
+$black-color: #000;
+$white-color: #fff;
+$regular-color: #606266;
+$secondary-color: #909399;
+$main-color: #9D9D9D;
+
+// 背景色
+$bg-colorFF: #ffffff ;
+$bg-color1A: #1A1A1A;
+$bg-color26: #262626;
+$bg-color4d: #4D4D4D;
+$bg-color3e: #3E3E3E;
+$bg-color34: #343434;
+$bg-color51: #E94951;
+$bg-color30: #303030;
+$bg-color07: #FFA907;
+$bg-color33: #333333;
+$bg-color39: #3A3939;
+$bg-color54: #545454;
+$bg-color00: #000;
+
+$bg-color0A: #FFA90A;
+$bg-color13: #E49913;
+
+// 字体颜色
+$font-E6: #E6E6E6;
+$font-FC: #FFCC99;
+$font-FF: #FFF;
+$font-CC: #CCC;
+$font-93: #939393;
+$font-94: #949494;
+$font-1A: #1A1A1A;
+$font-53: #535353;
+$font-07: #ffa907;
+$font-51: #E94951;
+$font-99:#999999;
+$font-0A:#FFA90A;
+$font-ff:#0091ff;
+$font-75:#757575;
+$font-80:#ffffff80;
+
+$font-BC: #BCBCBC;
+$font-E2: #e2b282;
+
+// 边框颜色
+$border-fc:#FFCC99;
+$border-25:#252525;
+$border-32:#323232;
+$border-80:#808080;
+$border-46:#464646;
+$border-0A:#FFA90A;
+$border-e2:#e2b282;
+$border-e9:#e9b37e;
+$border-30:#30281a;
+$border-54:#545454;
+$border-34:#343434;
+$border-3e: #3E3E3E;
+$border-66: #666666;
+
+// 按钮
+%btn-reg {
+    background-image: linear-gradient(0deg, #ff7a02 0%, #fea400 100%);
+}
+
+%border {
+    border: 1px solid rgba(255, 169, 7, 1) !important;
+    border-radius: 5px;
+}
+
+%subBtn {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: $font-1A;
+    text-align: center;
+    font-weight: 400;
+    background: $bg-color07;
+    border-radius: 5px;
+    border: 1px solid $bg-color07
+}
+
+%backBtn {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: $font-FF;
+    text-align: center;
+    font-weight: 400;
+    background: $bg-color30;
+    border-radius: 5px;
+    border: 1px solid $bg-color30
+}
+
+%btn_code {
+    color: $font-FF;
+    background-image: linear-gradient(90deg, #845600 0%, #FFA907 100%);
+    border-radius: 5px;
+}
+
+%deposit-hover {
+    background-image: linear-gradient(0deg, #d1650f 0%, #d1890f 100%);
+}
+
+%register-hover {
+    background-image: linear-gradient(0deg, #df6a00 0%, #e39301 100%);
+}
+
+
+// mask弹窗
+%mask {
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 999;
+}
+
+$font-family-regular: -apple-system,
+BlinkMacSystemFont,
+'PingFangSC-Regular',
+'Source Han Sans CN',
+'Helvetica Neue';
+$font-family-medium: -apple-system,
+BlinkMacSystemFont,
+'PingFangSC-Medium',
+'Source Han Sans CN Medium',
+'Helvetica Neue';
+
+%font-medium {
+    font-weight: 600;
+    font-family: $font-family-medium;
+}
+
+// 部安全区适配
+%safe-area-inset-bottom {
+    box-sizing: content-box;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}

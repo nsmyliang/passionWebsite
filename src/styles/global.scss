@@ -1,0 +1,121 @@
+@import './_size';
+@import './_color';
+@import './_flex';
+@import './element-ui';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+html {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: $font-family-regular;
+    padding: 0;
+    margin: 0;
+    background: $bg-colorFF;
+    // color: $font-FF;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+th,
+td,
+dl,
+dd,
+form,
+button,
+input,
+textarea,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+img {
+    border-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+input,
+textarea,
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+
+#app {
+    /* px-to-viewport-ignore-next */
+    height: 100%;
+}
+
+.font-medium {
+    @extend %font-medium;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.safe-area-inset-bottom {
+    @extend %safe-area-inset-bottom;
+}
+
+.on {
+    transform: rotateX(180deg);
+    transition: all 0.3s;
+}

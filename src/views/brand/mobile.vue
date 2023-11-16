@@ -1,0 +1,258 @@
+<template>
+	<div class="brand">
+		<div class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide single-swiper" v-for="(item, index) of slideList"
+						:key="'SingleSwiper' + index">
+						<img :src="item.imgUrl" />
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="title">
+			<div></div>
+			{{$t('brand.brand1')}}<span>{{$t('brand.brand2')}}</span>
+		</div>
+
+		<div class="con">
+			<div class="con-item" v-for="(item,index) in brandList" :key="index" @click="brandClick(item.index)">
+				<img class="item-img" :src="require(`@/assets/image/${item.imgUrl}.png`)">
+				<div class="item-txt">{{item.txt}}</div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<script>
+	import Swiper from 'swiper'
+	import 'swiper/css/swiper.css'
+	const banner0 = require('@/assets/image/brand-banner.png')
+	const banner1 = require('@/assets/image/brandList-banner1.png')
+	const banner2 = require('@/assets/image/brandList-banner2.png')
+	const banner3 = require('@/assets/image/brandList-banner3.png')
+	export default {
+
+		data() {
+			return {
+				brandList: [
+					{
+						imgUrl: 'brand-logo1',
+						txt: 'BOAT To Bowl',
+                        index:0,
+					},
+					{
+						imgUrl: 'brand-logo2',
+						txt: 'catit NUNA',
+                        index:1,
+					},
+					{
+						imgUrl: 'brand-logo3',
+						txt: 'Corey (North paw & ProSeries)',
+                        index:2,
+					},
+					{
+						imgUrl: 'brand-logo4',
+						txt: 'ProSeries',
+                        index:2,
+					},
+					{
+						imgUrl: 'brand-logo5',
+						txt: 'KOHA',
+                        index:3,
+					},
+					{
+						imgUrl: 'brand-logo6',
+						txt: 'Nano SANITAS',
+                        index:4,
+					},
+					{
+						imgUrl: 'brand-logo7',
+						txt: 'NWN',
+                        index:5,
+					},
+					{
+						imgUrl: 'brand-logo8',
+						txt: 'Nutrience',
+                        index:6,
+					},
+					{
+						imgUrl: 'brand-logo9',
+						txt: 'RAWZ',
+                        index:7,
+					},
+					{
+						imgUrl: 'brand-logo10',
+						txt: 'VETWATER',
+                        index:8,
+					},
+					{
+						imgUrl: 'brand-logo11',
+						txt: 'VETWATER',
+                        index:8,
+					},
+				],
+				currentSwiper: null,
+
+				slideList: [
+					{ imgUrl: banner0 },
+					{
+						imgUrl: banner1
+					},
+					{
+						imgUrl: banner2
+					},
+					{
+						imgUrl: banner3
+					},
+				]
+			};
+		},
+
+		mounted() {
+			this.$nextTick(() => {
+				this.initSwiper()
+			})
+		},
+		methods: {
+			brandClick(index) {
+				this.$router.push({ path: `/brandList` })
+				this.$store.commit('user/setBrandListIndex', index)
+				this.$store.commit('user/setNavIndex', 3)
+				return
+			},
+			//初始化swiper
+			initSwiper() {
+				// eslint-disable-next-line
+				let vueComponent = this //获取vue组件实例
+				this.currentSwiper = new Swiper('.swiper-container', {
+					noSwiping: true,
+                    noSwipingClass: '.swiper-container',
+					loop: true, // 循环模式选项
+					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
+					transitionDuration: 3000,
+					speed: 2500,
+
+					autoplay: {
+						delay: 3000,
+                        disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					}, 
+                    effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+				})
+			},
+
+			//销毁swiper
+			destroySwiperHot() {
+				try {
+					this.currentSwiper.destroy(true, false)
+				} catch (e) {
+					console.log(e)
+				}
+			},
+
+			//更新swiper
+			updateSwiper() {
+				this.$nextTick(() => {
+					this.initSwiper()
+				})
+			}
+		},
+		beforeDestroy() {
+			this.destroySwiperHot()
+		}
+
+	};
+</script>
+
+<style lang="scss" scoped>
+	.brand {
+		overflow-x: hidden;
+		padding-bottom: 270px;
+		background: #f0f0f0;
+		.banner {
+            max-height: 606PX;
+			width: 100%;
+		}
+		.title {
+			width: 940px;
+			margin: auto;
+			margin-top: 50px;
+			display: flex;
+			align-items: center;
+			font-size: 34px;
+			line-height: 48px;
+			font-weight: 600;
+			color: #525252;
+
+			div {
+				width: 11px;
+				height: 34px;
+				display: block;
+				margin-right: 9px;
+				background: #bebebe;
+			}
+			span {
+				font-weight: 200;
+			}
+		}
+		.con {
+			width: 1000px;
+			margin: auto;
+			padding-left: 60px;
+			display: flex;
+			flex-wrap: wrap;
+			.con-item {
+				margin-top: 60px;
+				margin-right: 123px;
+				text-align: center;
+                cursor: pointer;
+				&:nth-child(3n-1) {
+					margin-right: 62px;
+				}
+				&:nth-child(3n) {
+					margin-right: 0;
+					width: 345px;
+				}
+
+				.item-img {
+					width: 204px;
+					height: 124px;
+				}
+				.item-txt {
+					font-size: 22px;
+					color: #066eb7;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	::v-deep .swiper-pagination-bullets {
+		bottom: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	::v-deep .swiper-pagination-bullet {
+		background: #fff;
+		opacity: 1;
+		width: 7px;
+		height: 7px;
+		margin: 0 8px;
+	}
+	::v-deep .swiper-pagination-bullet-active {
+		width: 9px;
+		height: 9px;
+		border: 2px solid rgba(255, 255, 255, 1);
+		background: transparent;
+	}
+</style>
