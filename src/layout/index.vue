@@ -1,24 +1,24 @@
 <template>
   <div id="layout">
-    <HomeHead></HomeHead>
+    <pcHead></pcHead>
     <!-- 内容区域 -->
     <main class="container">
       <router-view />
     </main>
     <!-- 底部 -->
-    <HomeFoot></HomeFoot>
+    <pcFooter></pcFooter>
   </div>
 </template>
 
 <script>
-import HomeHead from './components/HomeHead'
-import HomeFoot from './components/HomeFoot'
+import pcHead from './components/pcHead'
+import pcFooter from './components/pcFooter'
 
 export default {
   name: 'Layout',
   components: {
-    HomeHead,
-    HomeFoot
+    pcHead,
+    pcFooter
   },
   computed: {
 

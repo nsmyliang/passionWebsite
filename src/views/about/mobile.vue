@@ -72,16 +72,16 @@
 				</div> -->
 			</div>
 		</div>
-		<contentFoot></contentFoot>
+		<pcContentfooter></pcContentfooter>
 	</div>
 
 </template>
 
 <script>
-	import contentFoot from '@/layout/components/contentFoot'
+	import pcContentfooter from '@/layout/components/pcContentfooter'
 	export default {
 		components: {
-			contentFoot,
+			pcContentfooter,
 		},
 		data() {
 			return {
@@ -149,10 +149,12 @@
 
 			.con-list {
 				p {
+					margin-left: 20px;
+					text-indent: 40px;
 					margin-top: 19px;
 					color: #353535;
 				}
-                // margin-top: 19px;
+				// margin-top: 19px;
 				// .list-item {
 				// 	margin-bottom: 30px;
 				// 	.item-title {
