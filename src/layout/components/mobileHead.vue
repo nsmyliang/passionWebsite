@@ -9,18 +9,20 @@
 			<div class="head-close">
 				<img src="@/assets/image/mobile/close.png" @click="mask=false">
 			</div>
-			<div class="head-nav">
-				<div class="head-item" :class="index==navIndex?'active':''" v-for="(item,index) in navList"
-					@click="navBtn(index)" :key="index">
-
-					{{ $t(item)}}
-				</div>
-				<!-- <div class="border">|</div>
+			<div class="head-search">
 				<img class="lang" src="@/assets/image/lang.png" @click="langClick()">
 				<div class="search">
 					<input type="text" :placeholder="$t('head.head94')" v-model="inpValue">
 					<div class="search-img"><img src="@/assets/image/home-search.png" @click="search()"></div>
-				</div> -->
+				</div>
+			</div>
+			<div class="head-nav">
+				<div class="head-item" :class="index==navIndex?'active':''" v-for="(item,index) in navList"
+					@click="navBtn(index)" :key="index">
+                    <span v-if="index ==3||index ==4">+</span>
+					{{ $t(item)}}
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -60,7 +62,7 @@
 				brandShow: false,
 				partnerShow: false,
 				inpValue: "",
-				mask: false
+				mask: true
 			};
 		},
 		computed: {
@@ -145,7 +147,8 @@
 					this.$store.commit('user/setBrandListIndex', 8)
 				}
 				this.$store.commit('user/setNavIndex', 3);
-				this.inpValue = ''
+				this.inpValue = '';
+                this.mask=false
 			}
 		}
 
@@ -161,9 +164,9 @@
 		color: #606060;
 		background: #f0f0f0;
 	}
-    .bg{
-        background: #fff;
-    } 
+	.bg {
+		background: #fff;
+	}
 	.head-log {
 		cursor: pointer;
 		display: flex;
@@ -190,7 +193,7 @@
 		background: #c0c0c0;
 	}
 	.head-close {
-		padding: 40px 16px;
+		padding: 40px 20px 24px;
 		cursor: pointer;
 		text-align: right;
 		img {
@@ -208,53 +211,61 @@
 			text-align: center;
 			cursor: pointer;
 
+            span {
+                margin-right: 20px;
+            }
 		}
 		.active {
 			color: #066eb7;
 			font-weight: 600;
 		}
-		.border {
-			margin: 0 30px 0 15px;
-		}
-		.lang {
-			// padding: 14px 0 22px;
-			width: 24px;
-			height: 20px;
-			vertical-align: middle;
-			cursor: pointer;
-		}
-		.search {
-			position: relative;
-			margin-left: 30px;
-			display: flex;
-			align-content: center;
-			input {
-				width: 116px;
-				height: 22px;
-				padding-left: 8px;
-				z-index: 1;
-				background: transparent;
-				font-size: 14px;
-				border: 1px solid rgba(151, 151, 151, 1);
-				border-radius: 2px;
-			}
-			input::input-placeholder {
-				color: #606060;
-				font-weight: 400;
-			}
+        
+	}
+    .head-search {
+        padding:0 20px;
+        display: flex;
+        align-items: center;
 
-			.search-img {
-				margin-left: 2px;
-				height: 22px;
-				width: 22px;
-				text-align: center;
-				background: #606060;
-				border-radius: 2px;
-				cursor: pointer;
-				img {
-					width: 12px;
-					height: 12px;
-				}
+    }
+	.lang {
+		// padding: 14px 0 22px;
+		width: 24px;
+		height: 20px;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	.search {
+		position: relative;
+		margin-left: 16px;
+		display: flex;
+		align-content: center;
+		input {
+			width: 244px;
+			height: 36px;
+			padding-left: 8px;
+			z-index: 1;
+			background: transparent;
+			font-size: 14px;
+			border: 1px solid rgba(151, 151, 151, 1);
+			border-radius: 5px;
+		}
+		input::input-placeholder {
+			color: #606060;
+			font-weight: 400;
+		}
+
+		.search-img {
+			margin-left: 6px;
+			height: 36px;
+            line-height: 36px;
+			width: 45px;
+			text-align: center;
+			background: #606060;
+			border-radius: 5px;
+			cursor: pointer;
+			img {
+				width: 12px;
+				height: 12px;
 			}
 		}
 	}
