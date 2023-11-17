@@ -61,8 +61,8 @@ export default {
         messageDetail4: "Carna4 對於乾糧的天然多變性作出的官方公告（中文譯本及英文正本）。",
     },
     brand: {
-        brand1: "最新",
-        brand2: "消息",
+        brand1: "代理",
+        brand2: "品牌",
     },
     brandList: {
         brandList1: "關於",
