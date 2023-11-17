@@ -62,7 +62,7 @@
 				brandShow: false,
 				partnerShow: false,
 				inpValue: "",
-				mask: true
+				mask: false
 			};
 		},
 		computed: {

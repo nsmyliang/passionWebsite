@@ -235,7 +235,7 @@
 	}
 
 	::v-deep .swiper-pagination-bullets {
-		bottom: 22px;
+		bottom: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -243,13 +243,13 @@
 	::v-deep .swiper-pagination-bullet {
 		background: #fff;
 		opacity: 1;
-		width: 7px;
-		height: 7px;
+		width: 4px;
+		height: 4px;
 		margin: 0 8px;
 	}
 	::v-deep .swiper-pagination-bullet-active {
-		width: 9px;
-		height: 9px;
+		width: 6px;
+		height: 6px;
 		border: 2px solid rgba(255, 255, 255, 1);
 		background: transparent;
 	}
