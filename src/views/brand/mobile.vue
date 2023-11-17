@@ -175,20 +175,22 @@
 
 <style lang="scss" scoped>
 	.brand {
+        padding-bottom: 30px;
 		overflow-x: hidden;
-		padding-bottom: 270px;
 		background: #f0f0f0;
 		.banner {
-            max-height: 606PX;
+            max-height: 104px;
 			width: 100%;
+            text-align: center;
+            img {
+                 max-height: 104px;
+            }
 		}
 		.title {
-			width: 940px;
-			margin: auto;
-			margin-top: 50px;
+			margin: 20px 24px 0;
 			display: flex;
 			align-items: center;
-			font-size: 34px;
+			font-size: 24px;
 			line-height: 48px;
 			font-weight: 600;
 			color: #525252;
@@ -205,30 +207,26 @@
 			}
 		}
 		.con {
-			width: 1000px;
-			margin: auto;
-			padding-left: 60px;
+            padding: 0 24px;
 			display: flex;
 			flex-wrap: wrap;
 			.con-item {
-				margin-top: 60px;
-				margin-right: 123px;
+				margin-top: 30px;
+				margin-right: 11px;
 				text-align: center;
                 cursor: pointer;
-				&:nth-child(3n-1) {
-					margin-right: 62px;
-				}
-				&:nth-child(3n) {
+
+				&:nth-child(2n) {
 					margin-right: 0;
-					width: 345px;
 				}
 
 				.item-img {
-					width: 204px;
-					height: 124px;
+					width: 158px;
+					height: 96px;
 				}
 				.item-txt {
-					font-size: 22px;
+                    width: 152px;
+					font-size: 16px;
 					color: #066eb7;
 					font-weight: 600;
 				}

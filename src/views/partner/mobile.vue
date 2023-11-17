@@ -50,7 +50,7 @@
 		background: #f0f0f0;
 
 		.title {
-			padding: 34px 0 16px;
+			padding: 20px 0 30px;
 			font-size: 38px;
 			color: #525252;
 			text-align: center;
@@ -58,25 +58,23 @@
 		}
 
 		.con {
-			width: 800px;
-			margin: auto;
 			text-align: center;
 			.con-item {
-				margin-bottom: 223px;
+				margin-bottom: 20px;
                 &:last-child{
 
                     margin-bottom:0;
                 }
 				.item-img {
-					width: 594px;
-					height: 389px;
+					width: 327px;
+					height: 214px;
 				}
 				.item-txt {
 					margin: auto;
 					width: 140px;
 					height: 42px;
 					line-height: 42px;
-					margin-top: 28px;
+					margin-top: 20px;
 					font-size: 20px;
 					color: #f0f0f0;
 					background: #066eb7;

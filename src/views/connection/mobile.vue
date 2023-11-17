@@ -41,11 +41,8 @@
 <style lang="scss" scoped>
 	.connection {
 		background: #f0f0f0fa;
-		margin: auto;
+		padding: 12px 24px 40px 24px;
 		.title {
-			width: 960px;
-			margin: auto;
-			padding-top: 43px;
 			display: flex;
 			align-items: center;
 			font-size: 34px;
@@ -67,18 +64,16 @@
 		}
 
 		.content {
-			height: 400px;
-			width: 920px;
-			margin: auto;
-			font-size: 16px;
+            margin-top: 34px;
+			font-size: 14px;
 			color: #000000;
 			line-height: 30px;
 			font-weight: 400;
 			div {
-				margin-top: 34px;
+				margin-top: 16px;
 
 				&:last-child {
-					font-size: 18px;
+					font-size: 16px;
 					color: #000000;
 					font-weight: 500;
 				}

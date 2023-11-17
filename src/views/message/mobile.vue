@@ -9,14 +9,14 @@
 			<div class="con-title">
 				<div class="title-txt">{{$t('message.message3')}}</div>
 				<div class="title-search">
-					<img src="@/assets/image/message-search.png">
+					<img src="@/assets/image/mobile/message-search.png">
 				</div>
 			</div>
 
 			<div class="con-list">
 				<div class="list-item" v-for="(item,index) in 2 " :key="index">
-					<div class="list-left">
-						<img src="@/assets/image/message-banner.png">
+					<div class="list-left" v-if="index==0">
+						<img src="@/assets/image/mobile/message-banner.png">
 					</div>
 
 					<div class="list-right" @click="toMessageDetail()">
@@ -84,20 +84,14 @@
 
 <style lang="scss" scoped>
 	.message {
-		padding-top: 31px;
-		padding-bottom: 276px;
-
-		background: #fafafa;
 		.title {
-			width: 980px;
-			margin: auto;
 			display: flex;
 			align-items: center;
 			font-size: 34px;
 			line-height: 48px;
 			font-weight: 600;
 			color: #525252;
-
+			padding: 12px 20px 16px;
 			div {
 				width: 11px;
 				height: 34px;
@@ -111,18 +105,15 @@
 		}
 
 		.con {
-			width: 972px;
-			margin: auto;
-			margin-top: 23px;
-			padding: 28px 20px;
-			background: #f0f0f0;
 			.con-title {
+				padding: 18px 20px;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				background: #066eb7;
 				.title-txt {
 					font-size: 16px;
-					color: #353535;
+					color: #ffffff;
 				}
 				.title-search {
 					cursor: pointer;
@@ -135,36 +126,21 @@
 
 			.con-list {
 				.list-item {
-					margin-top: 30px;
-					display: flex;
-					&:first-child {
-						margin-top: 50px;
-					}
-					&:nth-child(2n-1) {
-						.list-right {
-							border-left: none;
-						}
-					}
-					&:nth-child(2n) {
-						flex-direction: row-reverse;
-						.list-right {
-							border-right: none;
-						}
-					}
+
 					.list-left {
 						img {
-							width: 448px;
-							height: 338px;
+							width: 375px;
+							height: 200px;
 							display: block;
 						}
 					}
 					.list-right {
-                        cursor: pointer;
-						width: 484px;
-						padding: 25px 37px;
+						cursor: pointer;
+
+						margin: 25px 20px 0 20px;
 						font-weight: 400;
 						color: #353535;
-						border: 1px solid rgba(202, 202, 202, 1);
+						border-bottom: 1px solid rgba(202, 202, 202, 1);
 
 						.right-head {
 							display: flex;
@@ -205,15 +181,13 @@
 							font-weight: 400;
 						}
 						.right-desc {
-							height: 157px;
 							margin-top: 10px;
 							font-size: 16px;
 							color: #353535;
-							font-weight: 400;
-							border-bottom: 1px solid rgba(202, 202, 202, 1);
 						}
 						.right-bottom {
-							margin-top: 15px;
+							margin-top: 30px;
+                            padding-bottom: 27px;
 							display: flex;
 							align-items: center;
 							justify-content: space-between;

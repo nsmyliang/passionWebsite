@@ -145,6 +145,11 @@
 						&:nth-child(2) {
 							margin-top: 0;
 						}
+
+                        img {
+                            height: 33px;
+                            width: 76px;
+                        }
 					}
 				}
 			}

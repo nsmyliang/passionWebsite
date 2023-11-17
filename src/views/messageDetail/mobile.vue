@@ -3,7 +3,7 @@
 		<div class="title">
 			<div class="title-txt">{{$t('message.message3')}}</div>
 			<div class="title-search">
-				<img src="@/assets/image/message-search.png">
+				<img src="@/assets/image/mobile/message-search.png">
 			</div>
 		</div>
 
@@ -13,8 +13,8 @@
 					<div class="info-photo"><img src="@/assets/image/message-photo.png"></div>
 					<div class="info-txt">
 						Passion <img src="@/assets/image/message-write.png">
+						<div>{{$t('message.message4')}} · 1{{$t('message.message5')}}</div>
 					</div>
-					<div class="info-txt">{{$t('message.message4')}} · 1{{$t('message.message5')}}</div>
 				</div>
 				<div class="head-img"> <img src="@/assets/image/message-dot.png"></div>
 			</div>
@@ -98,22 +98,19 @@
 
 <style lang="scss" scoped>
 	.messageDetail {
-		width: 972px;
-		margin: auto;
-		padding: 26px 20px;
-		background: #f0f0f0;
-
 		.title {
+			padding: 18px 20px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			background: #066eb7;
+
 			.title-txt {
 				font-size: 16px;
-				color: #353535;
+				color: #fff;
 			}
 			.title-search {
 				cursor: pointer;
-				margin-right: 18px;
 				img {
 					height: 14px;
 					width: 14px;
@@ -122,10 +119,9 @@
 		}
 
 		.con {
-			margin-top: 54px;
-			padding: 58px 61px;
-			border: 1px solid rgba(202, 202, 202, 1);
+			margin-top: 40px;
 			.con-head {
+				padding: 0 20px 0 10px;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -154,6 +150,7 @@
 
 				.head-img {
 					cursor: pointer;
+					margin-right: 20;
 					img {
 						width: 3px;
 						height: 13px;
@@ -162,34 +159,35 @@
 			}
 
 			.con-title {
-				margin-top: 55px;
+				margin-top: 10px;
+                padding: 0 10px;
 				font-size: 28px;
 				color: #353535;
 				font-weight: 400;
 			}
 
 			.con-desc {
-				margin-top: 42px;
+				margin-top: 10px;
+                padding: 0 10px;
 				font-size: 16px;
 				color: #353535;
 				font-weight: 400;
 			}
 
 			.con-banner {
-				margin-top: 20px;
+				margin-top: 16px;
 				img {
-					width: 740px;
-					height: 400px;
+					width: 375px;
+					height: 200px;
 					display: block;
 				}
 			}
 
 			.con-share {
-				margin-top: 90px;
+                margin: 70px 20px 0 20px;
+                padding-bottom: 20px;
 				display: flex;
 				align-items: center;
-				padding: 20px 0;
-				border-top: 1px solid rgba(202, 202, 202, 1);
 				border-bottom: 1px solid rgba(202, 202, 202, 1);
 				div {
 					margin-right: 30px;
@@ -200,7 +198,8 @@
 				}
 			}
 			.con-bottom {
-				margin-top: 20px;
+                margin-top: 24px;
+				padding: 0 20px;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -222,7 +221,7 @@
 		}
 
 		.footer {
-			padding: 30px 0 25px;
+			padding: 70px 20px 30px;
 			.footer-head {
 				display: flex;
 				align-items: center;

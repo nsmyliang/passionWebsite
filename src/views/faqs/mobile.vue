@@ -44,12 +44,11 @@
 
 <style lang="scss" scoped>
 	.faq {
-		margin: auto;
-		padding-bottom: 182px;
-		background: url('@/assets/image/FAQBg.png');
+		padding: 12px 24px 28px 24px;
+		background: url('@/assets/image/mobile/FAQBg.png');
+        background-size: cover;
 		.title {
-			width: 960px;
-			margin: auto;
+
 			padding-top: 43px;
 			display: flex;
 			align-items: center;
@@ -72,26 +71,22 @@
 		}
 
 		.content {
-			width: 900px;
-			margin: auto;
-			font-size: 18px;
+			font-size: 14px;
 			color: #f0f0f0;
 			line-height: 30px;
 			font-weight: 400;
 			.txt-item {
-				margin-top: 110px;
-				padding: 43px 26px;
-				height: 197px;
-				width: 900px;
+				margin-top: 12px;
+				padding: 26px;
 				background: rgba(#000000, 0.3);
 
 				&:first-child {
-					margin-top: 70px;
+					margin-top: 30px;
 				}
 
 				div {
 					&:first-child {
-						margin-bottom: 30px;
+						margin-bottom: 20px;
 					}
 				}
 			}

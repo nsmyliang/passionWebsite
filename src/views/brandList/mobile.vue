@@ -21,7 +21,8 @@
 			<div class="con-list" v-for="(item,idx) in pageData.data" :key="idx">
 				<div class="con-nav">{{$t(item.nav)}}</div>
 				<div class="con-con">
-					<div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index">
+					<div class="con-item "  v-for="(item,index) in item.con"
+						:key="index">
 						<div class="item-img">
 							<img class="item-img" :src="require(`@/assets/image/brandList-${item.img}.png`)">
 						</div>
@@ -59,7 +60,7 @@
 		data() {
 			return {
 				brandList: [
-                    
+
 					// BOAT To Bowl
 					{
 						banner: banner1,
@@ -98,11 +99,11 @@
 								nav: '',
 								con: [
 									{
-										img: 'catit1',
+										img: 'mobileCatit1',
 										title: 'brandList.brandList14',
 										txt: 'brandList.brandList15'
 									}, {
-										img: 'catit2',
+										img: 'mobileCatit2',
 										title: 'brandList.brandList16',
 										txt: 'brandList.brandList17'
 									}
@@ -600,10 +601,10 @@
 			};
 		},
 		computed: {
-            brandListIndex() {
-                let brandListIndex = this.$store.state.user.brandListIndex;
-                return brandListIndex
-            },
+			brandListIndex() {
+				let brandListIndex = this.$store.state.user.brandListIndex;
+				return brandListIndex
+			},
 			pageData() {
 				let brandListIndex = this.$store.state.user.brandListIndex;
 				let pageData = this.brandList[brandListIndex]
@@ -624,25 +625,24 @@
 <style lang="scss" scoped>
 	.brand {
 		overflow-x: hidden;
-		padding-bottom: 270px;
+		padding-bottom: 30px;
 		background: #f0f0f0;
 		.banner {
 			width: 100%;
+			text-align: center;
+			img {
+				max-height: 104px;
+			}
 		}
 		.title {
-			width: 1000px;
-			margin: auto;
-			margin-top: 75px;
+			margin: 20px 24px 0;
 			display: flex;
 			align-items: center;
-			font-size: 34px;
+			font-size: 24px;
 			line-height: 48px;
 			font-weight: 600;
 			color: #525252;
 
-			&:first-child {
-				margin-top: 50px;
-			}
 
 			div {
 				width: 11px;
@@ -656,75 +656,60 @@
 			}
 		}
 		.desc {
-			width: 940px;
-			margin: auto;
-			margin-top: 30px;
+			margin: 20px 45px 0;
 			font-size: 16px;
 			color: #606060;
 			font-weight: 400;
 		}
 		.con {
-			width: 940px;
-
-			margin: auto;
-			.con-list {
-			}
+			margin: 0 24px;
 			.con-nav {
-				margin-top: 30px;
-				font-size: 30px;
+				margin-top: 20px;
+				font-size: 16px;
 				color: #525252;
 				font-weight: 600;
 			}
 			.con-con {
 				display: flex;
-				// justify-content: space-between;
-				// align-items: center;
 				flex-wrap: wrap;
 			}
 			.con-item {
 				margin-top: 20px;
-				margin-right: 20px;
-				width: 297px;
+				margin-right: 10px;
+				width: 158px;
 				border-radius: 5px;
 				background: #ffffff;
 
-                &:nth-child(3n) {
-                    margin-right: 0px;
-                }
+				&:nth-child(2n) {
+					margin-right: 0px;
+				}
 
 				.item-img {
 					border-radius: 5px;
 					text-align: center;
 					img {
-
-						width: 100%;
+						width: 158px;
+                        height: 190px;
 					}
 				}
 				.item-txt {
 					padding: 23px 16px;
 
 					.item-title {
-						font-size: 16px;
+						font-size: 12px;
 						color: #353535;
 						font-weight: 400;
 					}
 
 					.item-desc {
 						margin-top: 10px;
-						font-size: 14px;
+						font-size: 10px;
 						color: #606060;
 						font-weight: 400;
 					}
 				}
 			}
 
-            .active {
-                width: 456px;
-
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
 		}
 	}
 </style>

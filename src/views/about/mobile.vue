@@ -72,16 +72,16 @@
 				</div> -->
 			</div>
 		</div>
-		<pcContentFooter></pcContentFooter>
+		<mobileContentFooter></mobileContentFooter>
 	</div>
 
 </template>
 
 <script>
-	import pcContentFooter from '@/layout/components/pcContentFooter'
+	import mobileContentFooter from '@/layout/components/mobileContentFooter'
 	export default {
 		components: {
-			pcContentFooter,
+			mobileContentFooter,
 		},
 		data() {
 			return {
@@ -100,22 +100,16 @@
 
 <style lang="scss" scoped>
 	.about {
-		width: 1000px;
-		margin: auto;
-		padding-bottom: 100px;
+		padding:12px 24px ;
 		.banner {
-			padding-top: 16px;
 			text-align: center;
 			img {
-				width: 1000px;
-				height: 585px;
+				width: 327px;
+				height: 192px;
 			}
 		}
 		.con {
-			width: 1000px;
-			margin: auto;
 			margin-top: 38px;
-			padding-bottom: 78px;
 
 			.con-title {
 				position: relative;
@@ -141,15 +135,14 @@
 					position: absolute;
 					left: 131px;
 					bottom: 5px;
-					height: 1px;
-					width: 552px;
+					height: 1px; 
+					width: 196px;
 					background: rgba(209, 209, 209, 1);
 				}
 			}
 
 			.con-list {
 				p {
-					margin-left: 20px;
 					text-indent: 40px;
 					margin-top: 19px;
 					color: #353535;

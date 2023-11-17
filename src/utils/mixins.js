@@ -133,6 +133,7 @@ export const myMixin = {
     
             this.$router.push({ path: path })
             this.$store.commit('user/setNavIndex', index)
+            this.mask = false
         },
     },
 }

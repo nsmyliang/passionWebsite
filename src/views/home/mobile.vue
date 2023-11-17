@@ -56,16 +56,16 @@
 			</div>
 		</div>
 
-		<pcContentFooter></pcContentFooter>
+		<mobileContentFooter></mobileContentFooter>
 	</div>
 
 </template>
 
 <script>
-	import pcContentFooter from '@/layout/components/pcContentFooter'
+	import mobileContentFooter from '@/layout/components/mobileContentFooter'
 	export default {
 		components: {
-			pcContentFooter,
+			mobileContentFooter,
 		},
 		data() {
 
@@ -75,20 +75,20 @@
 		},
 
 		created() {
-           
+
 		},
 		mounted() {
 
 		},
 		methods: {
-			toBrand(){
+			toBrand() {
 				this.$router.push({ path: `/brand` })
-                this.$store.commit('user/setNavIndex', 3)
+				this.$store.commit('user/setNavIndex', 3)
 			},
-            toMessage(){
+			toMessage() {
 				this.$router.push({ path: `/message` })
-                this.$store.commit('user/setNavIndex', 2)
-            }
+				this.$store.commit('user/setNavIndex', 2)
+			}
 		},
 
 	};
@@ -96,67 +96,58 @@
 
 <style lang="scss" scoped>
 	.home {
-		width: 1000px;
-		padding-bottom: 117px;
-		margin: auto;
+		padding: 0 20px;
+        
 		.banner {
-			width: 1000px;
-			height: 480px;
+			text-align: center;
+			img {
+				width: 335px;
+				height: 160px;
+			}
 		}
 		.content {
 			margin-top: 30px;
-			display: flex;
-
 			.brand {
-				margin-top: 12px;
-				position: relative;
-				width: 227px;
-				height: 256px;
-				border: 1px solid rgba(230, 230, 230, 0.5);
-
+				margin-top: 21px;
 				.brand-title {
-					position: absolute;
-					top: -4px;
-					height: 30px;
-					font-size: 15px;
-					line-height: 15px;
+					font-size: 22px;
 					color: #525252;
-					background: #fff;
+					line-height: 23.41px;
+					font-weight: 600;
 					span {
 						font-weight: 200;
 					}
 					img {
-						width: 8px;
-						height: 7px;
-						margin-left: 6px;
+						width: 12px;
+						height: 10px;
+						margin-left: 16px;
 					}
 				}
 				.brand-list {
-					padding: 22px 25px 0;
 					display: flex;
-					justify-content: space-between;
 					flex-flow: wrap;
 					.brand-item {
-                        cursor: pointer;
-						margin-top: 10px;
-						&:first-child {
-							margin-top: 0;
-						}
-						&:nth-child(2) {
-							margin-top: 0;
-						}
+						cursor: pointer;
+						margin-right: 19px;
+                        margin-top: 20px;
+                        &:nth-child(2n) {
+                            margin-right: 0px;
+                        }
+                        img {
+                            width: 158px;
+                            height: 68px;
+                        }
 					}
 				}
 			}
 
 			.message {
-				margin-left: 16px;
-				width: 415px;
+				margin-top: 31px;
 				.message-title {
 					display: flex;
 					justify-content: space-between;
-					font-size: 34px;
-					font-weight: 500;
+					font-size: 26px;
+					font-weight: 600;
 
 					.title-left {
 						display: flex;
@@ -182,7 +173,7 @@
 						font-size: 11px;
 						color: #ffffff;
 						font-weight: 400;
-						width: 243px;
+						width: 180px;
 						background: #bebebe;
 
 						span {
@@ -223,7 +214,6 @@
 								font-weight: 400;
 							}
 							.con-title {
-								width: 285px;
 								margin-top: 5px;
 								font-size: 14px;
 								color: #000000;
@@ -258,7 +248,7 @@
 			}
 
 			.product {
-				margin-left: 37px;
+				margin-top: 30px;
 				.product-title {
 					font-size: 20px;
 					color: #525252;
