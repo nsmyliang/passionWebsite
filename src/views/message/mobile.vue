@@ -116,7 +116,7 @@
 					color: #ffffff;
 				}
 				.title-search {
-					cursor: pointer;
+					
 					img {
 						height: 14px;
 						width: 14px;
@@ -135,7 +135,7 @@
 						}
 					}
 					.list-right {
-						cursor: pointer;
+						
 
 						margin: 25px 20px 0 20px;
 						font-weight: 400;
@@ -157,7 +157,7 @@
 								.info-txt {
 									margin-left: 9px;
 									font-size: 12px;
-									cursor: pointer;
+									
 									img {
 										width: 9px;
 										height: 15px;
@@ -166,7 +166,7 @@
 							}
 
 							.head-img {
-								cursor: pointer;
+								
 								img {
 									width: 3px;
 									height: 13px;

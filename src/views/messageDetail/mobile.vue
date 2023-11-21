@@ -110,7 +110,7 @@
 				color: #fff;
 			}
 			.title-search {
-				cursor: pointer;
+				
 				img {
 					height: 14px;
 					width: 14px;
@@ -140,7 +140,7 @@
 					.info-txt {
 						margin-right: 16px;
 						font-size: 12px;
-						cursor: pointer;
+						
 						img {
 							width: 9px;
 							height: 15px;
@@ -149,7 +149,7 @@
 				}
 
 				.head-img {
-					cursor: pointer;
+					
 					margin-right: 20;
 					img {
 						width: 3px;

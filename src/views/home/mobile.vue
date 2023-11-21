@@ -127,7 +127,7 @@
 					display: flex;
 					flex-flow: wrap;
 					.brand-item {
-						cursor: pointer;
+						
 						margin-right: 19px;
                         margin-top: 20px;
                         &:nth-child(2n) {
@@ -182,14 +182,14 @@
 							text-align: center;
 							display: block;
 							background: #525252;
-							cursor: pointer;
+							
 						}
 					}
 				}
 				.message-item {
 					margin-top: 17px;
 					border-bottom: 1px dashed rgba(209, 209, 209, 1);
-					cursor: pointer;
+					
 					.message-con {
 						display: flex;
 						align-items: center;

@@ -214,7 +214,6 @@
 				margin-top: 30px;
 				margin-right: 11px;
 				text-align: center;
-                cursor: pointer;
 
 				&:nth-child(2n) {
 					margin-right: 0;
@@ -239,7 +238,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
+	} 
 	::v-deep .swiper-pagination-bullet {
 		background: #fff;
 		opacity: 1;

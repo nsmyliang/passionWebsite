@@ -66,7 +66,7 @@
             text-align: center;
             margin-top: 48px;
 			margin-right: 30px;
-			cursor: pointer;
+			
             &:first-child,&:nth-child(2) {
                 margin-top: 0;
             }

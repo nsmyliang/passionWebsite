@@ -5,7 +5,7 @@
 			<img class="logo" src="@/assets/image/logo.png">
 			<img class="dow" src="@/assets/image/mobile/dow.png" @click.stop="mask=true">
 		</div>
-		<div class="mask" v-if="mask">
+		<div class="mask" v-if="mask" @touchmove.stop.prevent>
 			<div class="head-close">
 				<img src="@/assets/image/mobile/close.png" @click="mask=false">
 			</div>
@@ -168,7 +168,7 @@
 		background: #fff;
 	}
 	.head-log {
-		cursor: pointer;
+		// 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -187,14 +187,14 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		height: 100%;
+		height: 100vh;
 		width: 100%;
 		z-index: 99;
 		background: #c0c0c0;
 	}
 	.head-close {
 		padding: 40px 20px 24px;
-		cursor: pointer;
+		// 
 		text-align: right;
 		img {
 			width: 16px;
@@ -209,7 +209,7 @@
 			min-width: 64px;
 			padding: 0 15px;
 			text-align: center;
-			cursor: pointer;
+			// 
 
             span {
                 margin-right: 20px;
@@ -222,17 +222,16 @@
         
 	}
     .head-search {
-        padding:0 20px;
         display: flex;
         align-items: center;
-
+        justify-content: center;
     }
 	.lang {
 		// padding: 14px 0 22px;
 		width: 24px;
 		height: 20px;
 		vertical-align: middle;
-		cursor: pointer;
+		
 	}
 	.search {
 		position: relative;
@@ -262,7 +261,7 @@
 			text-align: center;
 			background: #606060;
 			border-radius: 5px;
-			cursor: pointer;
+			
 			img {
 				width: 12px;
 				height: 12px;
