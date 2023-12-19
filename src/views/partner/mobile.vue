@@ -2,9 +2,16 @@
 	<div class="partner">
 		<div class="title">{{$t('partner.partner1')}}</div>
 		<div class="con">
-			<div class="con-item" v-for="(item,index) in partnerList" :key="index">
-				<img class="item-img" :src="require(`@/assets/image/${item.imgUrl}.png`)">
-				<div class="item-txt">{{$t(item.txt)}}</div>
+			<div class="con-item" v-for="(item,index) in brandList" :key="index" @click="brandClick(item.index)">
+				<img class="item-img" :src="require(`@/assets/image/partner/${item.imgUrl}.png`)">
+				<div class="item-txt">{{item.txt}}</div>
+			</div>
+		</div>
+		<div class="title margin">{{$t('partner.partner1')}}</div>
+		<div class="con">
+			<div class="con-item" v-for="(item,index) in brandList_1" :key="index" @click="brandClick(item.index)">
+				<img class="item-img" :src="require(`@/assets/image/partner/${item.imgUrl}.png`)">
+				<!-- <div class="item-txt">{{item.txt}}</div> -->
 			</div>
 		</div>
 	</div>
@@ -17,20 +24,110 @@
 
 		data() {
 			return {
-				partnerList: [
+				brandList: [
 					{
-						imgUrl: 'partner-banner1',
-						txt: 'partner.partner2'
+						imgUrl: 'logo1',
+						txt: 'Nutrience',
+                        index:0,
 					},
 					{
-						imgUrl: 'partner-banner2',
-						txt: 'partner.partner3'
+						imgUrl: 'logo2',
+						txt: 'Northwest Naturals',
+                        index:1,
 					},
 					{
-						imgUrl: 'partner-banner3',
-						txt: 'partner.partner4'
+						imgUrl: 'logo3',
+						txt: 'RAWZ',
+                        index:2,
 					},
-				]
+					{
+						imgUrl: 'logo4',
+						txt: 'NANO SANITAS',
+                        index:2,
+					},
+					{
+						imgUrl: 'logo5',
+						txt: 'North paw',
+                        index:3,
+					},
+					{
+						imgUrl: 'logo6',
+						txt: 'ProSeries',
+                        index:4,
+					},
+					{
+						imgUrl: 'logo7',
+						txt: 'catit',
+                        index:5,
+					},
+					{
+						imgUrl: 'logo8',
+						txt: 'VET WATER',
+                        index:6,
+					},
+					{
+						imgUrl: 'logo9',
+						txt: 'RAWZ',
+                        index:7,
+					},
+					{
+						imgUrl: 'logo10',
+						txt: 'BOAT TO BOWL',
+                        index:8,
+					},
+					{
+						imgUrl: 'logo11',
+						txt: 'BOAT TO BOWL',
+                        index:9,
+					},
+					{
+						imgUrl: 'logo12',
+						txt: 'BOAT TO BOWL',
+                        index:10,
+					},
+				],
+				brandList_1: [
+					{
+						imgUrl: 'logo10',
+						txt: 'BOAT TO BOWL',
+						index:8,
+					},
+					{
+						imgUrl: 'logo7',
+						txt: 'catit',
+                        index:5,
+					},
+					{
+						imgUrl: 'logo9',
+						txt: 'RAWZ',
+                        index:7,
+					},
+					{
+						imgUrl: 'logo5',
+						txt: 'North paw',
+                        index:3,
+					},
+					{
+						imgUrl: 'logo1',
+						txt: 'Nutrience',
+                        index:0,
+					},
+					{
+						imgUrl: 'logo12',
+						txt: 'BOAT TO BOWL',
+                        index:10,
+					},
+					{
+						imgUrl: 'logo6',
+						txt: 'ProSeries',
+                        index:4,
+					},
+					{
+						imgUrl: 'logo8',
+						txt: 'VET WATER',
+                        index:6,
+					},
+				],
 			};
 		},
 
@@ -47,38 +144,40 @@
 <style lang="scss" scoped>
 	.partner {
         padding-bottom: 61px;
-		background: #f0f0f0;
+		background: #fff;
 
 		.title {
-			padding: 20px 0 30px;
+			padding-top: 30px;
 			font-size: 38px;
 			color: #525252;
 			text-align: center;
 			font-weight: 500;
 		}
-
+		.margin{
+			margin-top:40px;
+		}
 		.con {
-			text-align: center;
+            padding: 0 24px;
+			display: flex;
+			flex-wrap: wrap;
 			.con-item {
-				margin-bottom: 20px;
-                &:last-child{
+				margin-top: 30px;
+				margin-right: 11px;
+				text-align: center;
 
-                    margin-bottom:0;
-                }
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
+
 				.item-img {
-					width: 327px;
-					height: 214px;
+					width: 158px;
+					height: 68px;
 				}
 				.item-txt {
-					margin: auto;
-					width: 140px;
-					height: 42px;
-					line-height: 42px;
-					margin-top: 20px;
-					font-size: 20px;
-					color: #f0f0f0;
-					background: #066eb7;
-					box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+                    width: 152px;
+					font-size: 16px;
+					color: #066eb7;
+					font-weight: 600;
 				}
 			}
 		}

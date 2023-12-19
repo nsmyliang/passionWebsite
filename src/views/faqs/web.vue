@@ -7,7 +7,7 @@
 		<div class="content">
 			<div class="txt-item">
 				<div>Q：{{$t('faqs.faqs3')}}</div>
-				<div>A：{{$t('faqs.faqs4')}}</div>
+				<div>A：<a href='./#/partner'>{{$t('faqs.faqs4')}}</a></div>
 			</div>
 			<div class="txt-item">
 				<div>Q：{{$t('faqs.faqs5')}}</div>
@@ -84,7 +84,9 @@
 				height: 197px;
 				width: 900px;
 				background: rgba(#000000, 0.3);
-
+				a{
+					color:#fff;
+				}
 				&:first-child {
 					margin-top: 70px;
 				}
