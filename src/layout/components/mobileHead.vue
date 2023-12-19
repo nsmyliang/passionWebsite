@@ -29,7 +29,7 @@
 </template>
 
 <script>
-	const dow = require('@/assets/image/mobile/dow.png')
+	// const dow = require('@/assets/image/mobile/dow.png')
 	import { myMixin } from '@/utils/mixins'
 	export default {
 		mixins: [myMixin],

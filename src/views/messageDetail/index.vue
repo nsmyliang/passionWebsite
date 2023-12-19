@@ -1,7 +1,7 @@
 <template>
-    <KeepAlive>
-        <component :is="pages"></component>
-    </KeepAlive>
+	<KeepAlive>
+		<component :is="pages" :idx= idx></component>
+	</KeepAlive>
 </template>
 
 <script>
@@ -22,6 +22,9 @@
 			pages() {
 				let num = this.$store.state.user.screenWidth // 大于 800 展示pc 小于展示 mobile
 				return num > 800 ? pc : mobile
+			},
+            idx() {
+				return this.$route.query.idx
 			}
 		},
 

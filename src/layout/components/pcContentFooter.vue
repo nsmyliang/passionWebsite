@@ -1,12 +1,12 @@
 <template>
 	<!-- 内容底部 -->
     <div class="footer">
-        <img src="@/assets/image/home-footer.png">
+        <!-- <img src="@/assets/image/home-footer.png">
         <div class="footer-txt">
             Copyright © 2023 MAXIPRO (ASIA) LIMITED. All Rights Reserve
-        </div>
+        </div> -->
         <div class="footer-share" >
-            <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 2" :key="index">
+            <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index">
         </div>
     </div>
 </template>
@@ -47,7 +47,7 @@
 		.footer {
 			position: relative;
 			width: 1000px;
-			margin-top: 16px;
+			// margin-top: 16px;
 			text-align: center;
 			img {
 				width: 556px;
@@ -67,7 +67,7 @@
 			.footer-share {
                 position: absolute;
                 left: 0;
-                top: 50px;
+                top: 13px;
                 img {
                     height: 30px;
                     width: 30px;

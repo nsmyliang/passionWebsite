@@ -8,7 +8,7 @@
 			<div class="head-item" :class="index==navIndex?'active':''" v-for="(item,index) in navList"
 				@click="navBtn(index)" :key="index">
 
-				{{index!=3&&index!==4?$t(item):''}}
+				{{index!=3?$t(item):''}}
 				<div class="head-brand" v-if="index==3" @mouseenter="brandShow=true" @mouseleave="brandShow=false">
 					{{$t('head.head3')}}
 					<div class="select left" v-if="brandShow">
@@ -18,7 +18,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="head-partner" v-if="index==4" @mouseenter="partnerShow=true"
+				<!-- <div class="head-partner" v-if="index==4" @mouseenter="partnerShow=true"
 					@mouseleave="partnerShow=false">
 					{{$t('head.head4')}}
 					<div class="select" v-if="partnerShow">
@@ -27,7 +27,7 @@
 							{{$t(item)}}
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="border">|</div>
 			<img class="lang" src="@/assets/image/lang.png" @click="langClick()">
@@ -195,8 +195,7 @@
 			min-width: 64px;
 			padding: 0 15px;
 			cursor: pointer;
-			&:nth-child(4),
-			&:nth-child(5) {
+			&:nth-child(4){
 				padding: 0;
 			}
 			.head-brand,
@@ -221,12 +220,16 @@
 					white-space: nowrap;
 					font-size: 16px;
 					font-weight: 400;
-					line-height: 26px;
+					line-height: 22px;
+                    padding-bottom: 9px;
 					color: #606060;
+                    &:last-child {
+                         padding-bottom: 0px;
+                    }
 				}
 
 				.width {
-					width: 120px;
+					width: 160px;
 				}
 				.option-item:hover {
 					color: #066eb7;

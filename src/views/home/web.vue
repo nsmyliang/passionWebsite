@@ -1,8 +1,16 @@
 <template>
 	<div class="home">
 		<div class="banner">
-			<div class="banner-item">
-				<img src="@/assets/image/home-banner.png">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+						<div class="banner-item">
+							<img :src="require(`@/assets/image/home-banner${index}.png`)">
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+					<div class="swiper-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+				</div>
 			</div>
 		</div>
 
@@ -13,7 +21,7 @@
 					<img src="@/assets/image/home-angle.png">
 				</div>
 				<div class="brand-list">
-					<div class="brand-item" v-for="(item,index) in 10" :key="index" @click="toBrand()">
+					<div class="brand-item" v-for="(item,index) in 10" :key="index" @click="toBrand(index)">
 						<img :src="require(`@/assets/image/home-brand${index+1}.png`)">
 					</div>
 				</div>
@@ -31,13 +39,13 @@
 				</div>
 				<div class="message-item" v-for="(item,index) in 2" :key="index" @click="toMessage()">
 					<div class="message-con">
-						<div class="con-img"><img src="@/assets/image/home-message1.png"></div>
+
+						<div class="con-img"><img :src="require(`@/assets/image/home-message${index+1}.png`)"></div>
 						<div class="con-con">
 							<div class="con-time">{{$t('home.home6')}}</div>
 							<div class="con-title">{{$t('home.home7')}}</div>
 							<div class="con-desc">{{$t('home.home8')}}</div>
 						</div>
-
 					</div>
 					<div class="con-btn">
 						{{$t('home.home9')}}
@@ -49,9 +57,13 @@
 				<div class="product-title">
 					{{$t('home.home10')}}<span>{{$t('home.home11')}}</span>
 				</div>
-				<div class="product-name">{{$t('home.home12')}}</div>
+				<div class="product-name">{{$t(productTxt())}} </div>
 				<div class="product-img">
-					<img src="@/assets/image/home-product.png">
+					<img :src="require(`@/assets/image/home-product${productIndex}.png`)">
+				</div>
+				<div class="product-btn">
+					<img src="@/assets/image/home-product-pre.png" @click="pre()">
+					<img src="@/assets/image/home-product-next.png" @click="next()">
 				</div>
 			</div>
 		</div>
@@ -62,6 +74,8 @@
 </template>
 
 <script>
+	import Swiper from 'swiper'
+	import 'swiper/css/swiper.css'
 	import pcContentFooter from '@/layout/components/pcContentFooter'
 	export default {
 		components: {
@@ -70,31 +84,108 @@
 		data() {
 
 			return {
-
+                productIndex:0
 			};
 		},
 
 		created() {
-           
-		},
-		mounted() {
 
 		},
+		mounted() {
+			this.$nextTick(() => {
+				this.initSwiper()
+			})
+		},
 		methods: {
-			toBrand(){
-				this.$router.push({ path: `/brand` })
-                this.$store.commit('user/setNavIndex', 3)
+            pre() {
+                if(this.productIndex>0) {
+                    this.productIndex--
+                }
+            },
+            next(){
+                if(this.productIndex<2) {
+                    this.productIndex++
+                }
+            },
+            productTxt() {
+               
+                let productIndex = this.productIndex;
+                let obj = {
+                    0: 'home.home12',
+                    1: 'home.home13',
+                    2: 'home.home14',
+                }
+                console.log(obj[productIndex],`1111`)
+                return  obj[productIndex]    
+            },
+
+			//初始化swiper
+			initSwiper() {
+				// eslint-disable-next-line
+				let vueComponent = this //获取vue组件实例
+				this.currentSwiper = new Swiper('.swiper-container', {
+					noSwiping: true,
+					noSwipingClass: '.swiper-container',
+					loop: true, // 循环模式选项
+					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
+					transitionDuration: 3000,
+					speed: 2500,
+
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+						hideOnClick: true,
+					},
+				})
 			},
-            toMessage(){
+			toBrand(index) {
+				this.$router.push({ path: `/brandList` })
+                this.$store.commit('user/setBrandListIndex', index)
+				this.$store.commit('user/setNavIndex', 3)
+			},
+			toMessage() {
 				this.$router.push({ path: `/message` })
-                this.$store.commit('user/setNavIndex', 2)
-            }
+				this.$store.commit('user/setNavIndex', 2)
+			}
 		},
 
 	};
 </script>
 
 <style lang="scss" scoped>
+	::v-deep .swiper-button-prev {
+		left: 20px;
+		width: 40px;
+		height: 40px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	::v-deep .swiper-button-next {
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	::v-deep .swiper-button-prev:after {
+		color: #fff;
+		font-size: 20px;
+	}
+	::v-deep .swiper-button-next:after {
+		color: #fff;
+		font-size: 20px;
+	}
 	.home {
 		width: 1000px;
 		padding-bottom: 117px;
@@ -102,6 +193,10 @@
 		.banner {
 			width: 1000px;
 			height: 480px;
+			img {
+				width: 1000px;
+				height: 480px;
+			}
 		}
 		.content {
 			margin-top: 30px;
@@ -137,7 +232,7 @@
 					justify-content: space-between;
 					flex-flow: wrap;
 					.brand-item {
-                        cursor: pointer;
+						cursor: pointer;
 						margin-top: 10px;
 						&:first-child {
 							margin-top: 0;
@@ -146,10 +241,10 @@
 							margin-top: 0;
 						}
 
-                        img {
-                            height: 33px;
-                            width: 76px;
-                        }
+						img {
+							height: 32px;
+							width: 74px;
+						}
 					}
 				}
 			}
@@ -273,9 +368,9 @@
 					}
 				}
 				.product-name {
+                    display: inline-flex;
 					margin-top: 4px;
-					height: 15px;
-					width: 63px;
+                    padding: 2px 10px;
 					font-size: 11px;
 					color: #ffffff;
 					text-align: center;
@@ -283,9 +378,23 @@
 					background: #525252;
 				}
 				.product-img {
-					margin-top: 8px;
-					width: 192px;
-					height: 210px;
+					margin-top: 6px;
+
+					img {
+						width: 192px;
+						height: 204px;
+					}
+				}
+
+				.product-btn {
+                    display: flex;
+                    justify-content: flex-end;
+					img {
+                        margin-left: 5px;
+						width: 28px;
+						height: 28px;
+                        cursor: pointer;
+					}
 				}
 			}
 		}

@@ -1,9 +1,9 @@
 <template>
 	<!-- 内容底部 -->
     <div class="footer">
-        <img class="footer-icon" src="@/assets/image/mobile/home-footer.png">
+        <!-- <img class="footer-icon" src="@/assets/image/mobile/home-footer.png"> -->
         <div class="footer-share" >
-            <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 2" :key="index">
+            <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index">
         </div>
     </div>
 </template>
@@ -51,6 +51,7 @@
 
 			.footer-share {
                 margin-top: 10px;
+                margin-bottom: 20px;
                 text-align: left;
                 img {
                     height: 30px;

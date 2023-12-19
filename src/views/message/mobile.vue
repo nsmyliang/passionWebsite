@@ -14,12 +14,12 @@
 			</div>
 
 			<div class="con-list">
-				<div class="list-item" v-for="(item,index) in 2 " :key="index">
-					<div class="list-left" v-if="index==0">
-						<img src="@/assets/image/mobile/message-banner.png">
+				<div class="list-item" v-for="(item,index) in list " :key="index"  @click="toMessageDetail(index)">
+					<div class="list-left" >
+						<img :src="require(`@/assets/image/message-banner${index}.png`)">
 					</div>
 
-					<div class="list-right" @click="toMessageDetail()">
+					<div class="list-right">
 						<div class="right-head">
 							<div class="head-info">
 								<img src="@/assets/image/message-photo.png">
@@ -32,10 +32,10 @@
 							<div class="head-img"> <img src="@/assets/image/message-dot.png"></div>
 						</div>
 						<div class="right-title">
-							{{$t('message.message6')}}
+							{{$t(item.title)}}
 						</div>
 						<div class="right-desc">
-							{{$t('message.message7')}}
+							{{$t(item.txt)}}
 						</div>
 						<div class="right-bottom">
 							<div class="bottom-txt">
@@ -62,7 +62,24 @@
 		data() {
 
 			return {
-
+                list:[
+                    {
+                        title:'message.message11',
+                        txt:'message.message12'
+                    },
+                    {
+                        title:'message.message13',
+                        txt:'message.message14'
+                    },
+                    {
+                        title:'message.message15',
+                        txt:'message.message16'
+                    },
+                    {
+                        title:'message.message17',
+                        txt:'message.message18'
+                    },
+                ]
 			};
 		},
 
@@ -73,8 +90,8 @@
 
 		},
 		methods: {
-			toMessageDetail() {
-				this.$router.push({ path: `/messageDetail` })
+			toMessageDetail(index) {
+				this.$router.push({ path: `/messageDetail`, query: { idx: index } })
 				this.$store.commit('user/setNavIndex', 2)
 			}
 		}

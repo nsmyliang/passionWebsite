@@ -177,7 +177,7 @@
 	.brand {
         padding-bottom: 30px;
 		overflow-x: hidden;
-		background: #f0f0f0;
+		// background: #f0f0f0;
 		.banner {
             max-height: 104px;
 			width: 100%;

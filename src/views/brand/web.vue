@@ -40,42 +40,42 @@
 				brandList: [
 					{
 						imgUrl: 'brand-logo1',
-						txt: 'BOAT To Bowl',
+						txt: 'Nutrience',
                         index:0,
 					},
 					{
 						imgUrl: 'brand-logo2',
-						txt: 'catit NUNA',
+						txt: 'Northwest Naturals',
                         index:1,
 					},
 					{
 						imgUrl: 'brand-logo3',
-						txt: 'Corey (North paw & ProSeries)',
+						txt: 'RAWZ',
                         index:2,
 					},
 					{
 						imgUrl: 'brand-logo4',
-						txt: 'ProSeries',
+						txt: 'NANO SANITAS',
                         index:2,
 					},
 					{
 						imgUrl: 'brand-logo5',
-						txt: 'KOHA',
+						txt: 'North paw',
                         index:3,
 					},
 					{
 						imgUrl: 'brand-logo6',
-						txt: 'Nano SANITAS',
+						txt: 'ProSeries',
                         index:4,
 					},
 					{
 						imgUrl: 'brand-logo7',
-						txt: 'NWN',
+						txt: 'catit',
                         index:5,
 					},
 					{
 						imgUrl: 'brand-logo8',
-						txt: 'Nutrience',
+						txt: 'VET WATER',
                         index:6,
 					},
 					{
@@ -85,12 +85,7 @@
 					},
 					{
 						imgUrl: 'brand-logo10',
-						txt: 'VETWATER',
-                        index:8,
-					},
-					{
-						imgUrl: 'brand-logo11',
-						txt: 'VETWATER',
+						txt: 'BOAT TO BOWL',
                         index:8,
 					},
 				],
@@ -177,7 +172,7 @@
 	.brand {
 		overflow-x: hidden;
 		padding-bottom: 270px;
-		background: #f0f0f0;
+		// background: #f0f0f0;
 		.banner {
             max-height: 606PX;
 			width: 100%;
@@ -207,21 +202,14 @@
 		.con {
 			width: 1000px;
 			margin: auto;
-			padding-left: 60px;
 			display: flex;
 			flex-wrap: wrap;
 			.con-item {
 				margin-top: 60px;
-				margin-right: 123px;
+                width: 333px;
 				text-align: center;
                 cursor: pointer;
-				&:nth-child(3n-1) {
-					margin-right: 62px;
-				}
-				&:nth-child(3n) {
-					margin-right: 0;
-					width: 345px;
-				}
+
 
 				.item-img {
 					width: 204px;

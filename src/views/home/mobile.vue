@@ -1,8 +1,15 @@
 <template>
 	<div class="home">
 		<div class="banner">
-			<div class="banner-item">
-				<img src="@/assets/image/home-banner.png">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+						<div class="banner-item">
+							<img :src="require(`@/assets/image/home-banner${index}.png`)">
+						</div>
+					</div>
+				</div>
+                <div class="swiper-pagination"></div>
 			</div>
 		</div>
 
@@ -31,7 +38,7 @@
 				</div>
 				<div class="message-item" v-for="(item,index) in 2" :key="index" @click="toMessage()">
 					<div class="message-con">
-						<div class="con-img"><img src="@/assets/image/home-message1.png"></div>
+						<div class="con-img"><img :src="require(`@/assets/image/home-message${index+1}.png`)"></div>
 						<div class="con-con">
 							<div class="con-time">{{$t('home.home6')}}</div>
 							<div class="con-title">{{$t('home.home7')}}</div>
@@ -62,6 +69,8 @@
 </template>
 
 <script>
+	import Swiper from 'swiper'
+	import 'swiper/css/swiper.css'
 	import mobileContentFooter from '@/layout/components/mobileContentFooter'
 	export default {
 		components: {
@@ -70,7 +79,7 @@
 		data() {
 
 			return {
-
+                productIndex:0
 			};
 		},
 
@@ -78,9 +87,43 @@
 
 		},
 		mounted() {
-
+			this.$nextTick(() => {
+				this.initSwiper()
+			})
 		},
 		methods: {
+			//初始化swiper
+			initSwiper() {
+				// eslint-disable-next-line
+				let vueComponent = this //获取vue组件实例
+				this.currentSwiper = new Swiper('.swiper-container', {
+					noSwiping: true,
+					noSwipingClass: '.swiper-container',
+					loop: true, // 循环模式选项
+					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
+					transitionDuration: 3000,
+					speed: 2500,
+
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+						hideOnClick: true,
+					},
+				})
+			},
 			toBrand() {
 				this.$router.push({ path: `/brand` })
 				this.$store.commit('user/setNavIndex', 3)
@@ -274,5 +317,24 @@
 				}
 			}
 		}
+	}
+	::v-deep .swiper-pagination-bullets {
+		bottom: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	::v-deep .swiper-pagination-bullet {
+		background: #D8D8D8;
+		opacity: 1;
+		width: 7px;
+		height: 7px;
+		margin: 0 8px;
+	}
+	::v-deep .swiper-pagination-bullet-active {
+		width: 7px;
+		height: 7px;
+		
+        background: #fff;
 	}
 </style>

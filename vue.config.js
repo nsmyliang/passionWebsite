@@ -14,7 +14,7 @@ function resolve(dir) {
  */
 module.exports = {
   publicPath: './',
-  assetsDir: './static',
+  assetsDir: 'static',
   // 关闭eslint检查
   lintOnSave: isDevelopment,
   productionSourceMap: false,

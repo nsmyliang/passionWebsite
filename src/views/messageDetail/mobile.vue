@@ -19,13 +19,13 @@
 				<div class="head-img"> <img src="@/assets/image/message-dot.png"></div>
 			</div>
 			<div class="con-title">
-				{{$t('message.message6')}}
+				{{$t(pageDate.title)}}
 			</div>
 			<div class="con-desc">
-				{{$t('message.message7')}}
+				{{$t(pageDate.txt)}}
 			</div>
 			<div class="con-banner">
-				<img src="@/assets/image/message-banner.png">
+				<img class="item-img" :src="require(`@/assets/image/message-banner${idx}.png`)">
 			</div>
 			<div class="con-share">
 				<div v-for="(item,index) in 4" :key="index">
@@ -78,16 +78,39 @@
 <script>
 
 	export default {
-
+		props: {
+			idx: {
+				type: String,
+				default: '',
+			},
+		},
 		data() {
 
 			return {
-
+				list: [
+					{
+						title: 'message.message11',
+						txt: 'message.message12'
+					},
+					{
+						title: 'message.message13',
+						txt: 'message.message14'
+					},
+					{
+						title: 'message.message15',
+						txt: 'message.message16'
+					},
+					{
+						title: 'message.message17',
+						txt: 'message.message18'
+					},
+				],
+				pageDate: ''
 			};
 		},
 
 		created() {
-
+			this.pageDate = this.list[this.idx]
 		},
 		mounted() {
 
@@ -95,6 +118,7 @@
 
 	};
 </script>
+
 
 <style lang="scss" scoped>
 	.messageDetail {
@@ -110,7 +134,6 @@
 				color: #fff;
 			}
 			.title-search {
-				
 				img {
 					height: 14px;
 					width: 14px;
@@ -140,7 +163,7 @@
 					.info-txt {
 						margin-right: 16px;
 						font-size: 12px;
-						
+
 						img {
 							width: 9px;
 							height: 15px;
@@ -149,7 +172,6 @@
 				}
 
 				.head-img {
-					
 					margin-right: 20;
 					img {
 						width: 3px;
@@ -160,7 +182,7 @@
 
 			.con-title {
 				margin-top: 10px;
-                padding: 0 10px;
+				padding: 0 10px;
 				font-size: 28px;
 				color: #353535;
 				font-weight: 400;
@@ -168,7 +190,7 @@
 
 			.con-desc {
 				margin-top: 10px;
-                padding: 0 10px;
+				padding: 0 10px;
 				font-size: 16px;
 				color: #353535;
 				font-weight: 400;
@@ -184,8 +206,8 @@
 			}
 
 			.con-share {
-                margin: 70px 20px 0 20px;
-                padding-bottom: 20px;
+				margin: 70px 20px 0 20px;
+				padding-bottom: 20px;
 				display: flex;
 				align-items: center;
 				border-bottom: 1px solid rgba(202, 202, 202, 1);
@@ -198,7 +220,7 @@
 				}
 			}
 			.con-bottom {
-                margin-top: 24px;
+				margin-top: 24px;
 				padding: 0 20px;
 				display: flex;
 				align-items: center;
