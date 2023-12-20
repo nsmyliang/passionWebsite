@@ -56,16 +56,11 @@
 					{
 						imgUrl: 'brand-logo4',
 						txt: 'NANO SANITAS',
-                        index:2,
+                        index:3,
 					},
 					{
 						imgUrl: 'brand-logo5',
 						txt: 'North paw',
-                        index:3,
-					},
-					{
-						imgUrl: 'brand-logo6',
-						txt: 'ProSeries',
                         index:4,
 					},
 					{
@@ -80,7 +75,7 @@
 					},
 					{
 						imgUrl: 'brand-logo9',
-						txt: 'RAWZ',
+						txt: 'KOHA',
                         index:7,
 					},
 					{
@@ -213,7 +208,7 @@
 
 				.item-img {
 					width: 204px;
-					height: 124px;
+					height: 88px;
 				}
 				.item-txt {
 					font-size: 22px;

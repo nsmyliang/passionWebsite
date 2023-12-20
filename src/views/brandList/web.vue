@@ -19,11 +19,13 @@
 		</div>
 		<div class="con">
 			<div class="con-list" v-for="(item,idx) in pageData.data" :key="idx">
-				<div class="con-nav">{{$t(item.nav)}}</div>
+				<!-- <div class="con-nav">{{$t(item.nav)}}</div> -->
+				<div class="con-nav"><img :src="require(`@/assets/image/brandList/${pageData.logo}.png`)"></div>
 				<div class="con-con">
-					<div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index">
+					<!-- <div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index"> -->
+					<div class="con-item "  v-for="(item,index) in item.con" :key="index">
 						<div class="item-img">
-							<img class="item-img" :src="require(`@/assets/image/brandList-${item.img}.png`)">
+							<img class="item-img" :src="require(`@/assets/image/brandList/${item.img}.png`)">
 						</div>
 
 						<div class="item-txt">
@@ -59,174 +61,192 @@
 		data() {
 			return {
 				brandList: [
-                    
-					// BOAT To Bowl
+                    // Nutrience
 					{
-						banner: banner1,
-						title: 'brandList.brandList3',
-						name: 'brandList.brandList11',
-						desc: 'brandList.brandList4',
+						banner: banner3,
+						title: 'brandList.brandList135',
+						name: 'brandList.brandList135',
+						desc: 'brandList.brandList1351',
+						logo: 'nutrience-logo',
 						data: [
 							{
-								nav: '',
+								nav: 'brandList.brandList136',
 								con: [
 									{
-										img: 'boat1',
-										title: 'brandList.brandList5',
-										txt: 'brandList.brandList6'
-									}, {
-										img: 'boat2',
-										title: 'brandList.brandList7',
-										txt: 'brandList.brandList8'
-									}, {
-										img: 'boat3',
-										title: 'brandList.brandList9',
-										txt: 'brandList.brandList10'
-									}
-								]
-							}
-						],
-					},
-					// catit NUNA
-					{
-						banner: banner2,
-						title: 'brandList.brandList12',
-						name: 'brandList.brandList18',
-						desc: 'brandList.brandList13',
-						data: [
-							{
-								nav: '',
-								con: [
+										img: 'Nutrience1',
+										title: 'nutrience.nutrience1',
+										txt: 'nutrience.nutrience2'
+									},
 									{
-										img: 'catit1',
-										title: 'brandList.brandList14',
-										txt: 'brandList.brandList15'
-									}, {
-										img: 'catit2',
-										title: 'brandList.brandList16',
-										txt: 'brandList.brandList17'
-									}
+										img: 'Nutrience2',
+										title: 'nutrience.nutrience3',
+										txt: 'nutrience.nutrience4'
+									},
+									{
+										img: 'Nutrience3',
+										title: 'nutrience.nutrience5',
+										txt: 'nutrience.nutrience6'
+									},
+									{
+										img: 'Nutrience4',
+										title: 'nutrience.nutrience7',
+										txt: 'nutrience.nutrience8'
+									},
+									{
+										img: 'Nutrience5',
+										title: 'nutrience.nutrience9',
+										txt: 'nutrience.nutrience10'
+									},
+									{
+										img: 'Nutrience6',
+										title: 'nutrience.nutrience11',
+										txt: 'nutrience.nutrience12'
+									},
+									{
+										img: 'Nutrience7',
+										title: 'nutrience.nutrience13',
+										txt: 'nutrience.nutrience14'
+									},
+									{
+										img: 'Nutrience8',
+										title: 'nutrience.nutrience15',
+										txt: 'nutrience.nutrience16'
+									},
+									{
+										img: 'Nutrience9',
+										title: 'nutrience.nutrience17',
+										txt: 'nutrience.nutrience18'
+									},
+									{
+										img: 'Nutrience10',
+										title: 'nutrience.nutrience19',
+										txt: 'nutrience.nutrience20'
+									},
+									{
+										img: 'Nutrience11',
+										title: 'nutrience.nutrience21',
+										txt: 'nutrience.nutrience22'
+									},
+									{
+										img: 'Nutrience12',
+										title: 'nutrience.nutrience23',
+										txt: 'nutrience.nutrience24'
+									},
+									{
+										img: 'Nutrience13',
+										title: 'nutrience.nutrience25',
+										txt: 'nutrience.nutrience26'
+									},
+									{
+										img: 'Nutrience14',
+										title: 'nutrience.nutrience27',
+										txt: 'nutrience.nutrience28'
+									},
+									{
+										img: 'Nutrience15',
+										title: 'nutrience.nutrience29',
+										txt: 'nutrience.nutrience30'
+									},
+									{
+										img: 'Nutrience16',
+										title: 'nutrience.nutrience31',
+										txt: 'nutrience.nutrience32'
+									},
 								]
-							}
-						],
-					},
-					//Corey (North paw & ProSeries)
+							},
+						]
+					},	
+					
+					//Northwest Naturals
 					{
 						banner: banner3,
 						title: 'brandList.brandList19',
 						name: 'brandList.brandList27',
 						desc: 'brandList.brandList20',
+						logo: 'north-logo',
 						data: [
 							{
 								nav: '',
 								con: [
 									{
 										img: 'north1',
-										title: 'brandList.brandList21',
-										txt: 'brandList.brandList22'
+										title: 'north.north1',
+										txt: 'north.north2'
 									}, {
 										img: 'north2',
-										title: 'brandList.brandList23',
-										txt: 'brandList.brandList24'
-									}, {
+										title: 'north.north3',
+										txt: 'north.north4'
+									}, 
+									{
 										img: 'north3',
-										title: 'brandList.brandList25',
-										txt: 'brandList.brandList26'
-									}
+										title: 'north.north5',
+										txt: 'north.north6'
+									},
+									{
+										img: 'north4',
+										title: 'north.north7',
+										txt: 'north.north8'
+									},
+									{
+										img: 'north5',
+										title: 'north.north9',
+										txt: 'north.north10'
+									},
+									{
+										img: 'north6',
+										title: 'north.north11',
+										txt: 'north.north12'
+									},
 								]
 							}
 						],
 					},
-					// KOHA
+					//RAWZ
 					{
 						banner: banner3,
-						title: 'brandList.brandList28',
-						name: 'brandList.brandList28',
-						desc: 'brandList.brandList30',
+						title: 'brandList.brandList149',
+						name: 'brandList.brandList149',
+						desc: 'brandList.brandList150',
 						data: [
 							{
-								nav: 'brandList.brandList29',
+								nav: 'brandList.brandList151',
 								con: [
 									{
-										img: 'koha1',
-										title: 'brandList.brandList31',
-										txt: 'brandList.brandList32'
+										img: 'RAWZ1',
+										title: 'brandList.brandList152',
+										txt: 'brandList.brandList153'
 									},
 									{
-										img: 'koha2',
-										title: 'brandList.brandList33',
-										txt: 'brandList.brandList34'
+										img: 'RAWZ2',
+										title: 'brandList.brandList154',
+										txt: 'brandList.brandList155'
 									},
 									{
-										img: 'koha3',
-										title: 'brandList.brandList35',
-										txt: 'brandList.brandList36'
+										img: 'RAWZ3',
+										title: 'brandList.brandList156',
+										txt: 'brandList.brandList157'
 									},
 									{
-										img: 'koha4',
-										title: 'brandList.brandList37',
-										txt: 'brandList.brandList38'
-									},
-								]
-							},
-							{
-								nav: 'brandList.brandList39',
-								con: [
-									{
-										img: 'koha5',
-										title: 'brandList.brandList40',
-										txt: 'brandList.brandList41'
+										img: 'RAWZ4',
+										title: 'brandList.brandList158',
+										txt: 'brandList.brandList159'
 									},
 									{
-										img: 'koha6',
-										title: 'brandList.brandList42',
-										txt: 'brandList.brandList43'
+										img: 'RAWZ5',
+										title: 'brandList.brandList160',
+										txt: 'brandList.brandList161'
 									},
 									{
-										img: 'koha7',
-										title: 'brandList.brandList44',
-										txt: 'brandList.brandList45'
-									},
-									{
-										img: 'koha8',
-										title: 'brandList.brandList46',
-										txt: 'brandList.brandList47'
-									},
-									{
-										img: 'koha9',
-										title: 'brandList.brandList48',
-										txt: 'brandList.brandList49'
-									},
-									{
-										img: 'koha10',
-										title: 'brandList.brandList50',
-										txt: 'brandList.brandList51'
-									},
-								]
-							},
-							{
-								nav: 'brandList.brandList52',
-								con: [
-									{
-										img: 'koha11',
-										title: 'brandList.brandList53',
-										txt: 'brandList.brandList54'
-									},
-									{
-										img: 'koha12',
-										title: 'brandList.brandList55',
-										txt: 'brandList.brandList56'
-									},
-									{
-										img: 'koha13',
-										title: 'brandList.brandList57',
-										txt: 'brandList.brandList58'
+										img: 'RAWZ6',
+										title: 'brandList.brandList162',
+										txt: 'brandList.brandList163'
 									},
 								]
 							},
 						]
 					},
-					// Nano SANITAS
+					
+					// NANO SANITAS
 					{
 						banner: banner3,
 						title: 'brandList.brandList59',
@@ -278,7 +298,7 @@
 							}
 						]
 					},
-					//NWN
+					//North paw
 					{
 						banner: banner3,
 						title: 'brandList.brandList79',
@@ -467,93 +487,28 @@
 							},
 						]
 					},
-					// Nutrience
+					// catit NUNA
 					{
-						banner: banner3,
-						title: 'brandList.brandList135',
-						name: 'brandList.brandList135',
-						desc: 'brandList.brandList1351',
+						banner: banner2,
+						title: 'brandList.brandList12',
+						name: 'brandList.brandList18',
+						desc: 'brandList.brandList13',
 						data: [
 							{
-								nav: 'brandList.brandList136',
+								nav: '',
 								con: [
 									{
-										img: 'Nutrience1',
-										title: 'brandList.brandList137',
-										txt: 'brandList.brandList138'
-									},
-									{
-										img: 'Nutrience2',
-										title: 'brandList.brandList139',
-										txt: 'brandList.brandList140'
-									},
-									{
-										img: 'Nutrience3',
-										title: 'brandList.brandList141',
-										txt: 'brandList.brandList142'
-									},
-									{
-										img: 'Nutrience4',
-										title: 'brandList.brandList143',
-										txt: 'brandList.brandList144'
-									},
-									{
-										img: 'Nutrience5',
-										title: 'brandList.brandList145',
-										txt: 'brandList.brandList146'
-									},
-									{
-										img: 'Nutrience6',
-										title: 'brandList.brandList147',
-										txt: 'brandList.brandList148'
-									},
+										img: 'catit1',
+										title: 'brandList.brandList14',
+										txt: 'brandList.brandList15'
+									}, {
+										img: 'catit2',
+										title: 'brandList.brandList16',
+										txt: 'brandList.brandList17'
+									}
 								]
-							},
-						]
-					},
-					//RAWZ
-					{
-						banner: banner3,
-						title: 'brandList.brandList149',
-						name: 'brandList.brandList149',
-						desc: 'brandList.brandList150',
-						data: [
-							{
-								nav: 'brandList.brandList151',
-								con: [
-									{
-										img: 'RAWZ1',
-										title: 'brandList.brandList152',
-										txt: 'brandList.brandList153'
-									},
-									{
-										img: 'RAWZ2',
-										title: 'brandList.brandList154',
-										txt: 'brandList.brandList155'
-									},
-									{
-										img: 'RAWZ3',
-										title: 'brandList.brandList156',
-										txt: 'brandList.brandList157'
-									},
-									{
-										img: 'RAWZ4',
-										title: 'brandList.brandList158',
-										txt: 'brandList.brandList159'
-									},
-									{
-										img: 'RAWZ5',
-										title: 'brandList.brandList160',
-										txt: 'brandList.brandList161'
-									},
-									{
-										img: 'RAWZ6',
-										title: 'brandList.brandList162',
-										txt: 'brandList.brandList163'
-									},
-								]
-							},
-						]
+							}
+						],
 					},
 					//VETWATER
 					{
@@ -593,6 +548,122 @@
 								]
 							},
 						]
+					},
+					// KOHA
+					{
+						banner: banner3,
+						title: 'brandList.brandList28',
+						name: 'brandList.brandList28',
+						desc: 'brandList.brandList30',
+						data: [
+							{
+								nav: 'brandList.brandList29',
+								con: [
+									{
+										img: 'koha1',
+										title: 'brandList.brandList31',
+										txt: 'brandList.brandList32'
+									},
+									{
+										img: 'koha2',
+										title: 'brandList.brandList33',
+										txt: 'brandList.brandList34'
+									},
+									{
+										img: 'koha3',
+										title: 'brandList.brandList35',
+										txt: 'brandList.brandList36'
+									},
+									{
+										img: 'koha4',
+										title: 'brandList.brandList37',
+										txt: 'brandList.brandList38'
+									},
+								]
+							},
+							{
+								nav: 'brandList.brandList39',
+								con: [
+									{
+										img: 'koha5',
+										title: 'brandList.brandList40',
+										txt: 'brandList.brandList41'
+									},
+									{
+										img: 'koha6',
+										title: 'brandList.brandList42',
+										txt: 'brandList.brandList43'
+									},
+									{
+										img: 'koha7',
+										title: 'brandList.brandList44',
+										txt: 'brandList.brandList45'
+									},
+									{
+										img: 'koha8',
+										title: 'brandList.brandList46',
+										txt: 'brandList.brandList47'
+									},
+									{
+										img: 'koha9',
+										title: 'brandList.brandList48',
+										txt: 'brandList.brandList49'
+									},
+									{
+										img: 'koha10',
+										title: 'brandList.brandList50',
+										txt: 'brandList.brandList51'
+									},
+								]
+							},
+							{
+								nav: 'brandList.brandList52',
+								con: [
+									{
+										img: 'koha11',
+										title: 'brandList.brandList53',
+										txt: 'brandList.brandList54'
+									},
+									{
+										img: 'koha12',
+										title: 'brandList.brandList55',
+										txt: 'brandList.brandList56'
+									},
+									{
+										img: 'koha13',
+										title: 'brandList.brandList57',
+										txt: 'brandList.brandList58'
+									},
+								]
+							},
+						]
+					},
+					// BOAT To Bowl
+					{
+						banner: banner1,
+						title: 'brandList.brandList3',
+						name: 'brandList.brandList11',
+						desc: 'brandList.brandList4',
+						data: [
+							{
+								nav: '',
+								con: [
+									{
+										img: 'boat1',
+										title: 'brandList.brandList5',
+										txt: 'brandList.brandList6'
+									}, {
+										img: 'boat2',
+										title: 'brandList.brandList7',
+										txt: 'brandList.brandList8'
+									}, {
+										img: 'boat3',
+										title: 'brandList.brandList9',
+										txt: 'brandList.brandList10'
+									}
+								]
+							}
+						],
 					},
 
 				],
