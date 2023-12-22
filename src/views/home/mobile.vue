@@ -1,9 +1,9 @@
 <template>
 	<div class="home">
 		<div class="banner">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+			<div class="swiper-container" id="swiper1">
+				<div class="swiper-wrapper" >
+					<div  class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
 						<div class="banner-item">
 							<img :src="require(`@/assets/image/home-banner${index}.png`)">
 						</div>
@@ -58,7 +58,16 @@
 				</div>
 				<div class="product-name">{{$t('home.home12')}}</div>
 				<div class="product-img">
-					<img src="@/assets/image/home-product.png">
+                    <div class="swiper-container" id="swiper2">
+                        <div class="swiper-wrapper" >
+                            <div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+                                <div class="banner-item">
+                                    <img :src="require(`@/assets/image/home-product${index}.png`)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -89,6 +98,7 @@
 		mounted() {
 			this.$nextTick(() => {
 				this.initSwiper()
+                this.initSwiper1()
 			})
 		},
 		methods: {
@@ -96,9 +106,40 @@
 			initSwiper() {
 				// eslint-disable-next-line
 				let vueComponent = this //获取vue组件实例
-				this.currentSwiper = new Swiper('.swiper-container', {
-					noSwiping: true,
-					noSwipingClass: '.swiper-container',
+				this.currentSwiper = new Swiper('#swiper1', {
+					// noSwiping: true,
+					// noSwipingClass: '.swiper-container',
+					loop: true, // 循环模式选项
+					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
+					transitionDuration: 3000,
+					speed: 2500,
+
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+						hideOnClick: true,
+					},
+				})
+			},
+			initSwiper1() {
+				// eslint-disable-next-line
+				let vueComponent = this //获取vue组件实例
+				this.currentSwiper = new Swiper('#swiper2', {
+					// noSwiping: true,
+					// noSwipingClass: '.swiper-container',
 					loop: true, // 循环模式选项
 					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
 					transitionDuration: 3000,

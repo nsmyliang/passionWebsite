@@ -20,10 +20,11 @@
 		<div class="con">
 			<div class="con-list" v-for="(item,idx) in pageData.data" :key="idx">
 				<!-- <div class="con-nav">{{$t(item.nav)}}</div> -->
-				<div class="con-nav"><img :src="require(`@/assets/image/brandList/${pageData.logo}.png`)"></div>
+				<div class="con-nav"><img :src="item.logo?require(`@/assets/image/brandList/${item.logo}.png`):''">
+				</div>
 				<div class="con-con">
 					<!-- <div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index"> -->
-					<div class="con-item "  v-for="(item,index) in item.con" :key="index">
+					<div class="con-item " v-for="(item,index) in item.con" :key="index">
 						<div class="item-img">
 							<img class="item-img" :src="require(`@/assets/image/brandList/${item.img}.png`)">
 						</div>
@@ -61,16 +62,16 @@
 		data() {
 			return {
 				brandList: [
-                    // Nutrience
+					// Nutrience
 					{
 						banner: banner3,
 						title: 'brandList.brandList135',
 						name: 'brandList.brandList135',
 						desc: 'brandList.brandList1351',
-						logo: 'nutrience-logo',
 						data: [
 							{
 								nav: 'brandList.brandList136',
+								logo: 'nutrience-logo',
 								con: [
 									{
 										img: 'Nutrience1',
@@ -155,18 +156,18 @@
 								]
 							},
 						]
-					},	
-					
+					},
+
 					//Northwest Naturals
 					{
 						banner: banner3,
 						title: 'brandList.brandList19',
 						name: 'brandList.brandList27',
 						desc: 'brandList.brandList20',
-						logo: 'north-logo',
 						data: [
 							{
 								nav: '',
+								logo: 'north-logo',
 								con: [
 									{
 										img: 'north1',
@@ -176,7 +177,7 @@
 										img: 'north2',
 										title: 'north.north3',
 										txt: 'north.north4'
-									}, 
+									},
 									{
 										img: 'north3',
 										title: 'north.north5',
@@ -197,6 +198,98 @@
 										title: 'north.north11',
 										txt: 'north.north12'
 									},
+									{
+										img: 'north7',
+										title: 'north.north1',
+										txt: 'north.north2'
+									}, {
+										img: 'north8',
+										title: 'north.north3',
+										txt: 'north.north4'
+									},
+									{
+										img: 'north9',
+										title: 'north.north5',
+										txt: 'north.north6'
+									},
+									{
+										img: 'north10',
+										title: 'north.north7',
+										txt: 'north.north8'
+									},
+									{
+										img: 'north11',
+										title: 'north.north9',
+										txt: 'north.north10'
+									},
+									{
+										img: 'north12',
+										title: 'north.north11',
+										txt: 'north.north12'
+									},
+									{
+										img: 'north13',
+										title: 'north.north1',
+										txt: 'north.north2'
+									}, {
+										img: 'north14',
+										title: 'north.north3',
+										txt: 'north.north4'
+									},
+									{
+										img: 'north15',
+										title: 'north.north5',
+										txt: 'north.north6'
+									},
+									{
+										img: 'north16',
+										title: 'north.north7',
+										txt: 'north.north8'
+									},
+									{
+										img: 'north17',
+										title: 'north.north9',
+										txt: 'north.north10'
+									},
+									{
+										img: 'north18',
+										title: 'north.north11',
+										txt: 'north.north12'
+									},
+									{
+										img: 'north19',
+										title: 'north.north1',
+										txt: 'north.north2'
+									}, {
+										img: 'north20',
+										title: 'north.north3',
+										txt: 'north.north4'
+									},
+									{
+										img: 'north21',
+										title: 'north.north5',
+										txt: 'north.north6'
+									},
+									{
+										img: 'north22',
+										title: 'north.north7',
+										txt: 'north.north8'
+									},
+									{
+										img: 'north23',
+										title: 'north.north9',
+										txt: 'north.north10'
+									},
+									{
+										img: 'north24',
+										title: 'north.north11',
+										txt: 'north.north12'
+									},
+									{
+										img: 'north25',
+										title: 'north.north1',
+										txt: 'north.north2'
+									}
 								]
 							}
 						],
@@ -207,37 +300,104 @@
 						title: 'brandList.brandList149',
 						name: 'brandList.brandList149',
 						desc: 'brandList.brandList150',
+						logo: '',
 						data: [
 							{
 								nav: 'brandList.brandList151',
+								logo: '',
 								con: [
 									{
-										img: 'RAWZ1',
+										img: 'rawz1',
 										title: 'brandList.brandList152',
 										txt: 'brandList.brandList153'
 									},
 									{
-										img: 'RAWZ2',
+										img: 'rawz2',
 										title: 'brandList.brandList154',
 										txt: 'brandList.brandList155'
 									},
 									{
-										img: 'RAWZ3',
+										img: 'rawz3',
 										title: 'brandList.brandList156',
 										txt: 'brandList.brandList157'
 									},
 									{
-										img: 'RAWZ4',
+										img: 'rawz4',
 										title: 'brandList.brandList158',
 										txt: 'brandList.brandList159'
 									},
 									{
-										img: 'RAWZ5',
+										img: 'rawz5',
 										title: 'brandList.brandList160',
 										txt: 'brandList.brandList161'
 									},
 									{
-										img: 'RAWZ6',
+										img: 'rawz6',
+										title: 'brandList.brandList162',
+										txt: 'brandList.brandList163'
+									},
+									{
+										img: 'rawz7',
+										title: 'brandList.brandList152',
+										txt: 'brandList.brandList153'
+									},
+									{
+										img: 'rawz8',
+										title: 'brandList.brandList154',
+										txt: 'brandList.brandList155'
+									},
+									{
+										img: 'rawz9',
+										title: 'brandList.brandList156',
+										txt: 'brandList.brandList157'
+									},
+									{
+										img: 'rawz10',
+										title: 'brandList.brandList158',
+										txt: 'brandList.brandList159'
+									},
+									{
+										img: 'rawz11',
+										title: 'brandList.brandList160',
+										txt: 'brandList.brandList161'
+									},
+									{
+										img: 'rawz12',
+										title: 'brandList.brandList162',
+										txt: 'brandList.brandList163'
+									},
+									{
+										img: 'rawz13',
+										title: 'brandList.brandList152',
+										txt: 'brandList.brandList153'
+									},
+									{
+										img: 'rawz14',
+										title: 'brandList.brandList154',
+										txt: 'brandList.brandList155'
+									},
+									{
+										img: 'rawz15',
+										title: 'brandList.brandList156',
+										txt: 'brandList.brandList157'
+									},
+									{
+										img: 'rawz16',
+										title: 'brandList.brandList158',
+										txt: 'brandList.brandList159'
+									},
+									{
+										img: 'rawz17',
+										title: 'brandList.brandList160',
+										txt: 'brandList.brandList161'
+									},
+									{
+										img: 'rawz18',
+										title: 'brandList.brandList162',
+										txt: 'brandList.brandList163'
+									},
+									{
+										img: 'rawz19',
 										title: 'brandList.brandList162',
 										txt: 'brandList.brandList163'
 									},
@@ -245,16 +405,18 @@
 							},
 						]
 					},
-					
+
 					// NANO SANITAS
 					{
 						banner: banner3,
 						title: 'brandList.brandList59',
 						name: 'brandList.brandList59',
 						desc: 'brandList.brandList60',
+						logo: 'NanoSANITAS-logo',
 						data: [
 							{
 								nav: '',
+								logo: 'NanoSANITAS-logo',
 								con: [
 									{
 										img: 'NanoSANITAS1',
@@ -295,7 +457,7 @@
 										txt: 'brandList.brandList78'
 									},
 								]
-							}
+							},
 						]
 					},
 					//North paw
@@ -307,182 +469,75 @@
 						data: [
 							{
 								nav: 'brandList.brandList80',
+								logo: 'NorthPaw-logo1',
 								con: [
 									{
-										img: 'NWN1',
+										img: 'NorthPaw1',
 										title: 'brandList.brandList81',
 										txt: 'brandList.brandList82'
 									},
 									{
-										img: 'NWN2',
+										img: 'NorthPaw2',
 										title: 'brandList.brandList83',
 										txt: 'brandList.brandList84'
 									},
 									{
-										img: 'NWN3',
+										img: 'NorthPaw3',
 										title: 'brandList.brandList85',
 										txt: 'brandList.brandList86'
 									},
 									{
-										img: 'NWN4',
+										img: 'NorthPaw4',
 										title: 'brandList.brandList87',
 										txt: 'brandList.brandList88'
 									},
 									{
-										img: 'NWN5',
+										img: 'NorthPaw5',
 										title: 'brandList.brandList89',
 										txt: 'brandList.brandList90'
 									},
 									{
-										img: 'NWN6',
+										img: 'NorthPaw6',
 										title: 'brandList.brandList91',
 										txt: 'brandList.brandList92'
 									},
 									{
-										img: 'NWN7',
+										img: 'NorthPaw7',
 										title: 'brandList.brandList94',
 										txt: 'brandList.brandList95'
 									},
+								]
+							},
+							{
+								nav: 'brandList.brandList80',
+								logo: 'NorthPaw-logo2',
+								con: [
 									{
-										img: 'NWN8',
+										img: 'NorthPaw8',
 										title: 'brandList.brandList96',
 										txt: 'brandList.brandList97'
 									},
 									{
-										img: 'NWN9',
+										img: 'NorthPaw9',
 										title: 'brandList.brandList98',
 										txt: 'brandList.brandList99'
 									},
 									{
-										img: 'NWN10',
+										img: 'NorthPaw10',
 										title: 'brandList.brandList100',
 										txt: 'brandList.brandList101'
 									},
 									{
-										img: 'NWN11',
+										img: 'NorthPaw11',
 										title: 'brandList.brandList102',
 										txt: 'brandList.brandList103'
 									},
 									{
-										img: 'NWN12',
+										img: 'NorthPaw12',
 										title: 'brandList.brandList104',
 										txt: 'brandList.brandList105'
 									},
-									{
-										img: 'NWN13',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN14',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN15',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN16',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN17',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN18',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN19',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-									{
-										img: 'NWN20',
-										title: 'brandList.brandList104',
-										txt: 'brandList.brandList105'
-									},
-								]
-							},
-							{
-								nav: 'brandList.brandList107',
-								con: [
-									{
-										img: 'NWN21',
-										title: 'brandList.brandList108',
-										txt: 'brandList.brandList109'
-									},
-									{
-										img: 'NWN22',
-										title: 'brandList.brandList110',
-										txt: 'brandList.brandList111'
-									},
-									{
-										img: 'NWN23',
-										title: 'brandList.brandList112',
-										txt: 'brandList.brandList113'
-									},
-									{
-										img: 'NWN24',
-										title: 'brandList.brandList114',
-										txt: 'brandList.brandList115'
-									},
-									{
-										img: 'NWN25',
-										title: 'brandList.brandList116',
-										txt: 'brandList.brandList117'
-									},
-									{
-										img: 'NWN26',
-										title: 'brandList.brandList118',
-										txt: 'brandList.brandList119'
-									},
-									{
-										img: 'NWN27',
-										title: 'brandList.brandList120',
-										txt: 'brandList.brandList121'
-									},
-									{
-										img: 'NWN28',
-										title: 'brandList.brandList122',
-										txt: 'brandList.brandList123'
-									},
-									{
-										img: 'NWN29',
-										title: 'brandList.brandList124',
-										txt: 'brandList.brandList125'
-									},
-								]
-							},
-							{
-								nav: 'brandList.brandList126',
-								con: [
-									{
-										img: 'NWN30',
-										title: 'brandList.brandList127',
-										txt: 'brandList.brandList128'
-									},
-									{
-										img: 'NWN31',
-										title: 'brandList.brandList129',
-										txt: 'brandList.brandList130'
-									},
-									{
-										img: 'NWN32',
-										title: 'brandList.brandList131',
-										txt: 'brandList.brandList132'
-									},
-									{
-										img: 'NWN33',
-										title: 'brandList.brandList133',
-										txt: 'brandList.brandList134'
-									},
+
 								]
 							},
 						]
@@ -496,6 +551,7 @@
 						data: [
 							{
 								nav: '',
+								logo: 'catit-logo',
 								con: [
 									{
 										img: 'catit1',
@@ -519,29 +575,27 @@
 						data: [
 							{
 								nav: 'brandList.brandList166',
+								logo: 'VETWATER-logo1',
 								con: [
 									{
 										img: 'VETWATER1',
 										title: 'brandList.brandList167',
 										txt: 'brandList.brandList168'
 									},
+
+								]
+							},
+							{
+								nav: 'brandList.brandList179',
+								logo: 'VETWATER-logo2',
+								con: [
 									{
 										img: 'VETWATER2',
 										title: 'brandList.brandList167',
 										txt: 'brandList.brandList168'
 									},
-								]
-							},
-							{
-								nav: 'brandList.brandList179',
-								con: [
 									{
 										img: 'VETWATER3',
-										title: 'brandList.brandList170',
-										txt: 'brandList.brandList171'
-									},
-									{
-										img: 'VETWATER4',
 										title: 'brandList.brandList170',
 										txt: 'brandList.brandList171'
 									},
@@ -558,6 +612,7 @@
 						data: [
 							{
 								nav: 'brandList.brandList29',
+								logo: 'koha-logo',
 								con: [
 									{
 										img: 'koha1',
@@ -579,60 +634,45 @@
 										title: 'brandList.brandList37',
 										txt: 'brandList.brandList38'
 									},
-								]
-							},
-							{
-								nav: 'brandList.brandList39',
-								con: [
 									{
 										img: 'koha5',
-										title: 'brandList.brandList40',
-										txt: 'brandList.brandList41'
+										title: 'brandList.brandList31',
+										txt: 'brandList.brandList32'
 									},
 									{
 										img: 'koha6',
-										title: 'brandList.brandList42',
-										txt: 'brandList.brandList43'
+										title: 'brandList.brandList33',
+										txt: 'brandList.brandList34'
 									},
 									{
 										img: 'koha7',
-										title: 'brandList.brandList44',
-										txt: 'brandList.brandList45'
+										title: 'brandList.brandList35',
+										txt: 'brandList.brandList36'
 									},
 									{
 										img: 'koha8',
-										title: 'brandList.brandList46',
-										txt: 'brandList.brandList47'
+										title: 'brandList.brandList37',
+										txt: 'brandList.brandList38'
 									},
 									{
 										img: 'koha9',
-										title: 'brandList.brandList48',
-										txt: 'brandList.brandList49'
+										title: 'brandList.brandList31',
+										txt: 'brandList.brandList32'
 									},
 									{
 										img: 'koha10',
-										title: 'brandList.brandList50',
-										txt: 'brandList.brandList51'
+										title: 'brandList.brandList33',
+										txt: 'brandList.brandList34'
 									},
-								]
-							},
-							{
-								nav: 'brandList.brandList52',
-								con: [
 									{
 										img: 'koha11',
-										title: 'brandList.brandList53',
-										txt: 'brandList.brandList54'
+										title: 'brandList.brandList35',
+										txt: 'brandList.brandList36'
 									},
 									{
 										img: 'koha12',
-										title: 'brandList.brandList55',
-										txt: 'brandList.brandList56'
-									},
-									{
-										img: 'koha13',
-										title: 'brandList.brandList57',
-										txt: 'brandList.brandList58'
+										title: 'brandList.brandList37',
+										txt: 'brandList.brandList38'
 									},
 								]
 							},
@@ -647,6 +687,7 @@
 						data: [
 							{
 								nav: '',
+								logo: 'catit-logo',
 								con: [
 									{
 										img: 'boat1',
@@ -667,14 +708,13 @@
 					},
 
 				],
-
 			};
 		},
 		computed: {
-            brandListIndex() {
-                let brandListIndex = this.$store.state.user.brandListIndex;
-                return brandListIndex
-            },
+			brandListIndex() {
+				let brandListIndex = this.$store.state.user.brandListIndex;
+				return brandListIndex
+			},
 			pageData() {
 				let brandListIndex = this.$store.state.user.brandListIndex;
 				let pageData = this.brandList[brandListIndex]
@@ -759,15 +799,14 @@
 				border-radius: 5px;
 				background: #ffffff;
 
-                &:nth-child(3n) {
-                    margin-right: 0px;
-                }
+				&:nth-child(3n) {
+					margin-right: 0px;
+				}
 
 				.item-img {
 					border-radius: 5px;
 					text-align: center;
 					img {
-
 						width: 100%;
 					}
 				}
@@ -789,13 +828,13 @@
 				}
 			}
 
-            .active {
-                width: 456px;
+			.active {
+				width: 456px;
 
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 </style>
