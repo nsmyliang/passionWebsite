@@ -7,13 +7,6 @@
 				<!-- <div class="item-txt">{{item.txt}}</div> -->
 			</div>
 		</div>
-		<div class="title margin">{{$t('partner.partner1')}}</div>
-		<div class="con">
-			<div class="con-item" v-for="(item,index) in brandList_1" :key="index" @click="brandClick(item.index)">
-				<img class="item-img" :src="require(`@/assets/image/partner/${item.imgUrl}.png`)">
-				<!-- <div class="item-txt">{{item.txt}}</div> -->
-			</div>
-		</div>
 	</div>
 
 </template>
@@ -43,16 +36,11 @@
 					{
 						imgUrl: 'logo4',
 						txt: 'NANO SANITAS',
-                        index:2,
+                        index:3,
 					},
 					{
 						imgUrl: 'logo5',
 						txt: 'North paw',
-                        index:3,
-					},
-					{
-						imgUrl: 'logo6',
-						txt: 'ProSeries',
                         index:4,
 					},
 					{
@@ -67,65 +55,13 @@
 					},
 					{
 						imgUrl: 'logo9',
-						txt: 'RAWZ',
+						txt: 'KOHA',
                         index:7,
 					},
 					{
 						imgUrl: 'logo10',
 						txt: 'BOAT TO BOWL',
                         index:8,
-					},
-					{
-						imgUrl: 'logo11',
-						txt: 'BOAT TO BOWL',
-                        index:9,
-					},
-					{
-						imgUrl: 'logo12',
-						txt: 'BOAT TO BOWL',
-                        index:10,
-					},
-				],
-				brandList_1: [
-					{
-						imgUrl: 'logo10',
-						txt: 'BOAT TO BOWL',
-						index:8,
-					},
-					{
-						imgUrl: 'logo7',
-						txt: 'catit',
-                        index:5,
-					},
-					{
-						imgUrl: 'logo9',
-						txt: 'RAWZ',
-                        index:7,
-					},
-					{
-						imgUrl: 'logo5',
-						txt: 'North paw',
-                        index:3,
-					},
-					{
-						imgUrl: 'logo1',
-						txt: 'Nutrience',
-                        index:0,
-					},
-					{
-						imgUrl: 'logo12',
-						txt: 'BOAT TO BOWL',
-                        index:10,
-					},
-					{
-						imgUrl: 'logo6',
-						txt: 'ProSeries',
-                        index:4,
-					},
-					{
-						imgUrl: 'logo8',
-						txt: 'VET WATER',
-                        index:6,
 					},
 				],
 			};
@@ -137,7 +73,14 @@
 		mounted() {
 
 		},
-
+		methods: {
+			brandClick(index) {
+				this.$router.push({ path: `/brandList` })
+				this.$store.commit('user/setBrandListIndex', index)
+				this.$store.commit('user/setNavIndex', 3)
+				return
+			},
+		}
 	};
 </script>
 

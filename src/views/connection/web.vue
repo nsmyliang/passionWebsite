@@ -57,7 +57,16 @@
 				</div>
 			</div>
 			<div class="btn-box">
-				<div class="btn">{{$t('connection.connection17')}}</div>
+				<div class="btn" @click="submit">{{$t('connection.connection17')}}</div>
+			</div>
+		</div>
+
+		<div class="mask" v-if="isMask">
+			<div class="mask-cont"></div>
+			<div class="mask-text">
+				<div class="mask-div">信息已提交</div>
+				<div class="mask-but" @click="submit">确定</div>
+				<!-- <div class="mask-icon"></div> -->
 			</div>
 		</div>
 	</div>
@@ -70,6 +79,7 @@
 		data() {
 			return {
 				type:0,
+				isMask:false
 			};
 		},
 
@@ -82,6 +92,9 @@
 		methods:{
 			typeCheck(i){
 				this.type = i
+			},
+			submit(){
+				this.isMask = !this.isMask
 			}
 		}
 
@@ -90,8 +103,55 @@
 
 <style lang="scss" scoped>
 	.connection {
+		position: relative;
 		background: #fff;
 		margin: auto;
+		.mask{
+			.mask-cont{
+				position:fixed;
+				background:#000;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+				top: 0;
+				left: 0;
+			}
+			.mask-text{
+				width: 400px;
+				height: 200px;
+				background:#fff;
+				position:fixed;
+				left: 50%;
+				top:50%;
+				margin:-100px 0 0 -200px;
+				text-align:center;
+				border-radius:5px;
+				.mask-but{
+					background: #066EB7;
+					border: 1px solid rgba(216,216,216,1);
+					border-radius: 5px;
+					width: 176px;
+					height: 44px;
+					text-align: center;
+					line-height:44px;
+					color:#fff;
+					cursor: pointer;
+					margin:0 auto;
+				}
+				.mask-div{
+					padding:50px 0;
+				}
+				.mask-icon{
+					position:absolute;
+					background: url('@/assets/image/close.png') no-repeat;
+					background-size:100%;
+					width: 32px;
+					height: 32px;
+					right:0;
+					top:0;
+				}
+			}
+		}
 		.form{
 			width: 1000px;
 			margin:auto;
@@ -182,6 +242,7 @@
 					text-align: center;
 					line-height:44px;
 					color:#fff;
+					cursor: pointer;
 				}
 			}
 			
