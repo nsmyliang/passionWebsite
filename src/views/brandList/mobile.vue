@@ -19,11 +19,14 @@
 		</div>
 		<div class="con">
 			<div class="con-list" v-for="(item,idx) in pageData.data" :key="idx">
-				<div class="con-nav">{{$t(item.nav)}}</div>
+				<!-- <div class="con-nav">{{$t(item.nav)}}</div> -->
+				<div class="con-nav"><img :src="item.logo?require(`@/assets/image/brandList/${item.logo}.png`):''">
+				</div>
 				<div class="con-con">
+					<!-- <div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index"> -->
 					<div class="con-item " v-for="(item,index) in item.con" :key="index">
 						<div class="item-img">
-							<img class="item-img" :src="require(`@/assets/image/brandList-${item.img}.png`)">
+							<img class="item-img" :src="require(`@/assets/image/brandList/${item.img}.png`)">
 						</div>
 
 						<div class="item-txt">
@@ -778,6 +781,7 @@
 			.con-con {
 				display: flex;
 				flex-wrap: wrap;
+                justify-content: space-between;
 			}
 			.con-item {
 				margin-top: 20px;
