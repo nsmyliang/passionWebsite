@@ -1,7 +1,7 @@
 <template>
 	<div class="home">
 		<div class="banner">
-			<div class="swiper-container">
+			<div class="swiper-container" id="swiper1">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
 						<div class="banner-item">
@@ -123,7 +123,7 @@
 			initSwiper() {
 				// eslint-disable-next-line
 				let vueComponent = this //获取vue组件实例
-				this.currentSwiper = new Swiper('.swiper-container', {
+				this.currentSwiper = new Swiper('#swiper1', {
 					noSwiping: true,
 					noSwipingClass: '.swiper-container',
 					loop: true, // 循环模式选项

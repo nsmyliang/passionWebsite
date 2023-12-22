@@ -63,7 +63,7 @@
 			text-align: center;
 			img {
 				width: 1000px;
-				height: 585px;
+				height: 464px;
 			}
 		}
 		.con {

@@ -40,57 +40,47 @@
 				brandList: [
 					{
 						imgUrl: 'brand-logo1',
-						txt: 'BOAT To Bowl',
+						txt: 'Nutrience',
                         index:0,
 					},
 					{
 						imgUrl: 'brand-logo2',
-						txt: 'catit NUNA',
+						txt: 'Northwest Naturals',
                         index:1,
 					},
 					{
 						imgUrl: 'brand-logo3',
-						txt: 'Corey (North paw & ProSeries)',
+						txt: 'RAWZ',
                         index:2,
 					},
 					{
 						imgUrl: 'brand-logo4',
-						txt: 'ProSeries',
-                        index:2,
-					},
-					{
-						imgUrl: 'brand-logo5',
-						txt: 'KOHA',
+						txt: 'NANO SANITAS',
                         index:3,
 					},
 					{
-						imgUrl: 'brand-logo6',
-						txt: 'Nano SANITAS',
+						imgUrl: 'brand-logo5',
+						txt: 'North paw',
                         index:4,
 					},
 					{
 						imgUrl: 'brand-logo7',
-						txt: 'NWN',
+						txt: 'catit',
                         index:5,
 					},
 					{
 						imgUrl: 'brand-logo8',
-						txt: 'Nutrience',
+						txt: 'VET WATER',
                         index:6,
 					},
 					{
 						imgUrl: 'brand-logo9',
-						txt: 'RAWZ',
+						txt: 'KOHA',
                         index:7,
 					},
 					{
 						imgUrl: 'brand-logo10',
-						txt: 'VETWATER',
-                        index:8,
-					},
-					{
-						imgUrl: 'brand-logo11',
-						txt: 'VETWATER',
+						txt: 'BOAT TO BOWL',
                         index:8,
 					},
 				],
@@ -172,7 +162,6 @@
 
 	};
 </script>
-
 <style lang="scss" scoped>
 	.brand {
         padding-bottom: 30px;

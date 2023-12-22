@@ -46,7 +46,7 @@ export default {
         about6: "柏森寵物營養有限公司的主要品牌，包括：Hagen Nutrience, RAWZ 及 Northwest Naturals。Nutrience是Hagen家族擁有的品牌。Hagen建立於1955年，並堅持只生產最好的寵物食品。RAWZ由Scott家族創立於2015年，在Dog Food Advisor網頁上評為五星評價。Northwest Naturals採用6000巴高壓加工技術(High Pressure Processing Technology)生產新鮮、無菌、高營養的凍乾寵物食品。",
         about7: "寵匯商貿有限公司的主要品牌，包括：Carna4、Earthborn Holistic、Venture、Propac Ultimates、Sportmix Wholesomes及Tucker’s。Carna4是來自加拿大的高級寵物食品品牌，採用快速烘焙風乾法，生產生肉級寵物食品。Earthborn Holistic是一個所有生命階段的多功能寵物營養品牌。Venture是Earthborn Holistic的高級子品牌，為狗狗提供優質及獨特的動物蛋白質。Propac Ultimates生產100%天然、不含荷爾蒙的寵物食品 ; Sportmix Wholesomes為寵物提供均衡營養，有助於增強體質 ; Tucker’s是一個家族擁有的手工寵物食品品牌。",
         about8: "寵祺商貿有限公司的主要品牌，包括Nulo和Steve’s Real Food。Nulo著名於以高動物蛋白質、低碳水化合物及使用低血糖的成分。他們擁有一種幫助消化的專利益生菌，其的專利益生菌在烹煮過程中、保質期內及消化道中均可以存活。Steve’s Real Food是製造生肉寵物食品的先驅，他們是在1998年市場上第一個商業的生肉品牌。",
-        about9: "",
+        about9: "在創始人豐富的知識、經驗和前瞻性思維的幫助下，激情寵物集團在過去的幾年裏在寵物食品和寵物保健品領域迅速發展。此外，我們擁有一支充滿激情的員工團隊，他們積極熱情地向經銷商推廣高品質的產品，並建立頂級的寵物服務體驗。我們的直銷團隊根植於香港，我們的銷售覆蓋香港，澳門和中國大陸。",
         about10: "我們的策略夥伴分佈在中國各大城市。我們在中國的團隊有效地將寵物產品、貼心的服務及核心價值傳遞予於中國寵物愛好者，滿足中國每個角落的寵物需求。",
     },
     message: {

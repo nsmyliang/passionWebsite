@@ -59,8 +59,8 @@
 		.banner {
 			text-align: center;
 			img {
-				width: 327px;
-				height: 192px;
+				width: 366px;
+				
 			}
 		}
 		.con {

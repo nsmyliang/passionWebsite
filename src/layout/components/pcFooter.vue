@@ -6,7 +6,7 @@
 				{{ $t(item)}}
 			</div>
 		</div>
-		<div class="footer-brand">@2021 IPOINT TRADING LIMITED. ALL RIGHTS RESERVED</div>
+		<div class="footer-brand">@2023 Passion Pet Nutrition Limited. All Rights Reserved</div>
 	</div>
 </template>
 
