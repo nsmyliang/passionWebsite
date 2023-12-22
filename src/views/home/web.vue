@@ -84,7 +84,7 @@
 		data() {
 
 			return {
-                productIndex:0
+				productIndex: 0
 			};
 		},
 
@@ -97,27 +97,27 @@
 			})
 		},
 		methods: {
-            pre() {
-                if(this.productIndex>0) {
-                    this.productIndex--
-                }
-            },
-            next(){
-                if(this.productIndex<2) {
-                    this.productIndex++
-                }
-            },
-            productTxt() {
-               
-                let productIndex = this.productIndex;
-                let obj = {
-                    0: 'home.home12',
-                    1: 'home.home13',
-                    2: 'home.home14',
-                }
-                console.log(obj[productIndex],`1111`)
-                return  obj[productIndex]    
-            },
+			pre() {
+				if (this.productIndex > 0) {
+					this.productIndex--
+				}
+			},
+			next() {
+				if (this.productIndex < 2) {
+					this.productIndex++
+				}
+			},
+			productTxt() {
+
+				let productIndex = this.productIndex;
+				let obj = {
+					0: 'home.home12',
+					1: 'home.home13',
+					2: 'home.home14',
+				}
+				console.log(obj[productIndex], `1111`)
+				return obj[productIndex]
+			},
 
 			//初始化swiper
 			initSwiper() {
@@ -153,9 +153,14 @@
 			},
 			toBrand(index) {
 				this.$router.push({ path: `/brandList` })
-                this.$store.commit('user/setBrandListIndex', index)
+				if (index < 5) {
+					this.$store.commit('user/setBrandListIndex', index)
+				} else {
+					this.$store.commit('user/setBrandListIndex', index - 1)
+				}
 				this.$store.commit('user/setNavIndex', 3)
 			},
+
 			toMessage() {
 				this.$router.push({ path: `/message` })
 				this.$store.commit('user/setNavIndex', 2)
@@ -368,9 +373,9 @@
 					}
 				}
 				.product-name {
-                    display: inline-flex;
+					display: inline-flex;
 					margin-top: 4px;
-                    padding: 2px 10px;
+					padding: 2px 10px;
 					font-size: 11px;
 					color: #ffffff;
 					text-align: center;
@@ -387,13 +392,13 @@
 				}
 
 				.product-btn {
-                    display: flex;
-                    justify-content: flex-end;
+					display: flex;
+					justify-content: flex-end;
 					img {
-                        margin-left: 5px;
+						margin-left: 5px;
 						width: 28px;
 						height: 28px;
-                        cursor: pointer;
+						cursor: pointer;
 					}
 				}
 			}

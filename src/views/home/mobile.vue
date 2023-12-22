@@ -20,7 +20,7 @@
 					<img src="@/assets/image/home-angle.png">
 				</div>
 				<div class="brand-list">
-					<div class="brand-item" v-for="(item,index) in 10" :key="index" @click="toBrand()">
+					<div class="brand-item" v-for="(item,index) in 10" :key="index" @click="toBrand(index)">
 						<img :src="require(`@/assets/image/home-brand${index+1}.png`)">
 					</div>
 				</div>
@@ -165,8 +165,13 @@
 					},
 				})
 			},
-			toBrand() {
-				this.$router.push({ path: `/brand` })
+			toBrand(index) {
+				this.$router.push({ path: `/brandList` })
+				if (index < 5) {
+					this.$store.commit('user/setBrandListIndex', index)
+				} else {
+					this.$store.commit('user/setBrandListIndex', index - 1)
+				}
 				this.$store.commit('user/setNavIndex', 3)
 			},
 			toMessage() {

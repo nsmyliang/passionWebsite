@@ -118,40 +118,43 @@
 
 			search() {
 				let inpValue = this.inpValue;
-
-				if (["BOAT To Bowl ", "BOAT", "To", "Bowl"].includes(inpValue)) {
+				if (["Nutrience", "nutrience"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 0)
 				}
-				if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
+				if (["Northwest Naturals", "Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 1)
 				}
-				if (["Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
+
+				if (["RAWZ"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 2)
 				}
-				if (["KOHA",].includes(inpValue)) {
+
+				if (["Nano SANITAS", "Nano", "SANITAS",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 3)
 				}
-				if (["Nano SANITAS", "Nano", "SANITAS",].includes(inpValue)) {
+
+				if (["NWN",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 4)
 				}
-				if (["NWN",].includes(inpValue)) {
-					this.$router.push({ path: `/brandList` })
-					this.$store.commit('user/setBrandListIndex', 5)
-				}
-				if (["Nutrience"].includes(inpValue)) {
+                    if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
+                        this.$router.push({ path: `/brandList` })
+                        this.$store.commit('user/setBrandListIndex', 5)
+                    }
+
+				if (["VETWATER (CATWATER & DOGWATER)", "VETWATER", "CATWATER", "DOGWATER"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 6)
 				}
-				if (["RAWZ"].includes(inpValue)) {
+				if (["KOHA",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 7)
 				}
-				if (["VETWATER (CATWATER & DOGWATER)", "VETWATER", "CATWATER", "DOGWATER"].includes(inpValue)) {
+				if (["BOAT To Bowl ", "BOAT", "To", "Bowl"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 8)
 				}
@@ -195,7 +198,7 @@
 			min-width: 64px;
 			padding: 0 15px;
 			cursor: pointer;
-			&:nth-child(4){
+			&:nth-child(4) {
 				padding: 0;
 			}
 			.head-brand,
@@ -221,11 +224,11 @@
 					font-size: 16px;
 					font-weight: 400;
 					line-height: 22px;
-                    padding-bottom: 9px;
+					padding-bottom: 9px;
 					color: #606060;
-                    &:last-child {
-                         padding-bottom: 0px;
-                    }
+					&:last-child {
+						padding-bottom: 0px;
+					}
 				}
 
 				.width {

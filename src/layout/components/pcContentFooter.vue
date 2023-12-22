@@ -5,7 +5,7 @@
         <div class="footer-txt">
             Copyright © 2023 MAXIPRO (ASIA) LIMITED. All Rights Reserve
         </div> -->
-        <div class="footer-share" >
+        <div class="footer-share" @click="btn()">
             <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index">
         </div>
     </div>
@@ -36,7 +36,9 @@
 		},
 		destroyed() { },
 		methods: {
-
+            btn(){
+                window.open("https://www.facebook.com/passionpetgroup", '_blank')
+            }
 		}
 
 	};
