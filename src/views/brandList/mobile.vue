@@ -201,7 +201,7 @@
 									{
 										img: 'north7',
 										title: 'brandList.NorthwestNaturals13',
-										txt: 'brandList.NorthwestNatural14'
+										txt: 'brandList.NorthwestNaturals14'
 									}, {
 										img: 'north8',
 										title: 'brandList.NorthwestNaturals15',
