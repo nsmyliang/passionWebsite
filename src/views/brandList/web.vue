@@ -304,7 +304,7 @@
 						data: [
 							{
 								nav: '',
-								logo: '',
+								logo: 'rawz-logo',
 								con: [
 									{
 										img: 'rawz1',
@@ -578,7 +578,11 @@
 										title: 'brandList.vetCatWater1',
 										txt: 'brandList.vetCatWater2'
 									},
-
+									{
+										img: 'vetCatWater2',
+										title: 'brandList.vetCatWater3',
+										txt: 'brandList.vetCatWater4'
+									},
 								]
 							},
 							{
@@ -587,13 +591,13 @@
 								con: [
 									{
 										img: 'vetDogWater1',
-										title: 'brandList.vetDWater1',
-										txt: 'brandList.vetDWater2'
+										title: 'brandList.vetDogWater1',
+										txt: 'brandList.vetDogWater2'
 									},
 									{
 										img: 'vetDogWater2',
-										title: 'brandList.vetDWater3',
-										txt: 'brandList.vetDWater4'
+										title: 'brandList.vetDogWater3',
+										txt: 'brandList.vetDogWater4'
 									},
 								]
 							},
