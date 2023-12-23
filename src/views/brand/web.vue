@@ -29,7 +29,7 @@
 <script>
 	import Swiper from 'swiper'
 	import 'swiper/css/swiper.css'
-	const banner0 = require('@/assets/image/brand-banner.png')
+	const banner0 = require('@/assets/image/brandList-banner0.png')
 	const banner1 = require('@/assets/image/brandList-banner1.png')
 	const banner2 = require('@/assets/image/brandList-banner2.png')
 	const banner3 = require('@/assets/image/brandList-banner3.png')

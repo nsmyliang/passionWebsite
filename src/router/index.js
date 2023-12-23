@@ -54,11 +54,6 @@ var router = new Router({
                 component: () => import('@/views/brandList/index')
             },
             {
-                path: '/partnerList',
-                name: 'partnerList',
-                component: () => import('@/views/partnerList/index')
-            },
-            {
                 path: '/messageDetail',
                 name: 'messageDetail',
                 component: () => import('@/views/messageDetail/index')
