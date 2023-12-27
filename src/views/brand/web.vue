@@ -169,13 +169,17 @@
 		padding-bottom: 270px;
 		// background: #f0f0f0;
 		.banner {
-            max-height: 606PX;
+            max-height: 606px;
 			width: 100%;
+            img {
+                max-height: 606px;
+                width: 100%;
+            }
 		}
 		.title {
 			width: 940px;
 			margin: auto;
-			margin-top: 50px;
+			padding-top: 50px;
 			display: flex;
 			align-items: center;
 			font-size: 34px;

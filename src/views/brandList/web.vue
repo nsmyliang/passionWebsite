@@ -26,7 +26,7 @@
 					<!-- <div class="con-item " :class="brandListIndex==1?'active':''" v-for="(item,index) in item.con" :key="index"> -->
 					<div class="con-item " v-for="(item,index) in item.con" :key="index">
 						<div class="item-img">
-							<img class="item-img" :src="require(`@/assets/image/brandList/${item.img}.png`)">
+							<img :src="require(`@/assets/image/brandList/${item.img}.png`)">
 						</div>
 
 						<div class="item-txt">
@@ -744,6 +744,9 @@
 		background: #f0f0f0;
 		.banner {
 			width: 100%;
+			img {
+				width: 100%;
+			}
 		}
 		.title {
 			width: 1000px;
