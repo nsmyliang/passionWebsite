@@ -20,6 +20,7 @@
 						<p>{{$t('about.about7')}}</p>
 						<p>{{$t('about.about8')}}</p>
 						<p>{{$t('about.about9')}}</p>
+                        <p>{{$t('about.about10')}}</p>
 					</div>
 					<!-- <div class="item-desc">
 						{{$t('about.about5')}}
@@ -73,7 +74,6 @@
 			padding-bottom: 30px;
 
 			.con-title {
-				position: relative;
 				display: flex;
 				align-items: center;
 				font-size: 26px;
@@ -93,9 +93,8 @@
 					font-weight: 200;
 				}
 				.title-border {
-					position: absolute;
-					left: 131px;
-					bottom: 5px;
+					margin-top: 24px;
+					margin-left: 10px;
 					height: 1px;
 					width: 552px;
 					background: rgba(209, 209, 209, 1);

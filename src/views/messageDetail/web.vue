@@ -45,7 +45,7 @@
 
 		</div>
 
-		<div class="footer">
+		<!-- <div class="footer">
 			<div class="footer-head">
 				<div>{{$t('message.messageDetail1')}}</div>
 				<div>{{$t('message.messageDetail2')}}</div>
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 </template>
@@ -123,6 +123,7 @@
 	.messageDetail {
 		width: 972px;
 		margin: auto;
+        margin-bottom: 54px;
 		padding: 26px 20px;
 		background: #f0f0f0;
 

@@ -115,7 +115,6 @@
 					1: 'home.home13',
 					2: 'home.home14',
 				}
-				console.log(obj[productIndex], `1111`)
 				return obj[productIndex]
 			},
 

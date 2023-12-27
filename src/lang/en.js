@@ -15,7 +15,7 @@ export default {
         head11: "Corey",
         head12: "catit",
         head13: "VET WATER",
-        head14: "RAWZ",
+        head14: "KOHA",
         head15: "BOAT TO BOWL",
 
         head90: "CHINA",
@@ -40,8 +40,8 @@ export default {
         home14: "Nutrience Infusion",
     },
     about: {
-        about1: "關於",
-        about2: "我們",
+        about1: "ABOUT",
+        about2: "US",
         about3: "公司背景",
         about4: "Passion Pet Group was established in 2012. We are specialized in marketing famous and popular pet food brands from the United States and Canada to mainland China, Hong Kong and Macau. With our professional experiences, we have successfully established a comprehensive sales network in the pet food industry.",
         about5: "As the business continues to develop, Passion Pet Group has established three wholly owned subsidiaries: Passion Pet Nutrition Limited, iPoint Trading Limited & NuPet Trading Limited.",
@@ -52,8 +52,8 @@ export default {
         about10: "Our strategic partners are distributed in major cities of China. Our China team efficiently distributes pet products, caring services and core values to Chinese pet lovers and to meet the needs of pets in every corner of China.",
     },
     message: {
-        message1: "最新",
-        message2: "消息",
+        message1: "Latest",
+        message2: "NEWS",
         message3: "All Posts",
         message4: "2023年10月8日",
         message5: "分鐘",
@@ -77,8 +77,8 @@ export default {
     },
 
     brand: {
-        brand1: "代理",
-        brand2: "品牌",
+        // brand1: "代理",
+        brand2: "Brand",
     },
     brandList: {
         brandList1: "About",
@@ -265,7 +265,7 @@ export default {
 
 
         nutrienceName: 'Nutrience',
-        nutrienceDesc: 'Nutrience的名字來自於「科學」(science)及「養分」(nutrient)。而nutrient一詞源自拉丁語“nutriens”，意思是滋養或餵養。這個原則讓Nutrience於30多年來致力為貓狗們提供完整及均衡的飲食。「真正適合的營養」一直是Nutrience的核心理念，並以此理念持續推動研發更多創新的產品。Nutrience的配方均達到AAFCO設立的營養標準，採用人道飼養及使用可持續方式收成的食材。Nutrience堅信 — 只有良好的食物品質能造就健康的生活。',
+        nutrienceDesc: 'Nutrience took its name from the word ‘science’ and the word ‘nutrient’ from the latin word ‘nutriens’ meaning to nourish or feed. These guiding principles have led Nutrience to providing dogs and cats with complete and balanced diets for over 30 years. Proper nourishment has been at the core of Nutrience’s philosophy and continues to fuel its innovation. All Nutrience formulas meet the nutritional standards set by AAFCO with ingredients that are humanely raised and sustainably harvested. Here at Nutrience, we believe that a healthy lifestyle begins in the bowl',
         nutrience1: '凍乾鮮雞肉 無穀物 雞、火雞、海魚 全貓配方',
         nutrience2: 'Ingredients: Deboned chicken, deboned turkey, chicken meal, turkey meal, salmon, chicken liver, chicken heart, turkey liver, turkey heart, herring, cod, cod liver, whole eggs, peas, chicken fat (preserved with mixed tocopherols), red lentils, sweet potatoes, chickpeas, natural chicken flavor, sun-cured alfalfa meal, freeze-dried chicken, freeze-dried pumpkin, freeze-dried chicken liver, freeze-dried green mussels, freeze-dried cod liver, freeze-dried kelp, salmon oil, herring oil, coconut oil, pumpkin, butternut squash, carrots, spinach, broccoli, apples, blueberries, cranberries, pomegranate, juniper berry extract, ginger, fennel, chamomile, peppermint leaf, licorice root, turmeric, valerian root, vitamins [vitamin E supplement, vitamin A supplement, niacin, calcium pantothenate, riboflavin, pyridoxine hydrochloride, thiamine mononitrate, biotin, vitamin B12 supplement, vitamin D3 supplement, folic acid], minerals [zinc sulfate, zinc proteinate, iron proteinate, ferrous sulfate, copper proteinate, copper sulfate, manganese proteinate, manganous oxide, calcium iodate, sodium selenite], salt, choline chloride, taurine, potassium chloride, DL-methionine, L-lysine, chicory root extract, yucca schidigera extract, yeast extract, thyme extract, glucosamine hydrochloride, rosemary extract, chondroitin sulfate, L-carnitine, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus casei fermentation product, dried Bifidobacterium bifidum fermentation product, dried Enterococcus faecium fermentation product',
         nutrience3: '凍乾鮮牛肝 紅肉、海魚 全貓配方',
@@ -300,7 +300,7 @@ export default {
         nutrience32: 'Ingredients: Salmon, Tuna and Amberjack.',
 
         NorthwestNaturalsName: 'Northwest Naturals',
-        NorthwestNaturalsDesc: 'Northwest Naturals(NWN)使命是為愛寵人士提供可以幫助毛孩強健體魄、改善毛孩長期健康且易於餵食的食物選擇。NWN的產品均是根據最先進的科學及生食食物設備原則所配製。NWN相信「生物適性生食法」(BARF)能有助提升寵物的生活質素。不論毛孩的品種大小、活動水平，都可以成為每位家長身邊健康活潑的毛小孩。',
+        NorthwestNaturalsDesc: 'The Northwest Naturals(NWN) mission is to provide pet lovers the option of feeding their pets health-enhancing, life-prolonging, and easy-to-feed food. The products are carefully formulated based on the most advanced science and principles of raw food diet preparation. NWN believes in the premise that BARF (Biologically Appropriate Raw Food) improves the quality of life for pets. The mission is to play an active role in the development of healthy companions, regardless of size or activity level。',
         NorthwestNaturals1: '牛 + 鱒魚配方 凍乾貓糧',
         NorthwestNaturals2: 'Ingredients: Beef Heart, Trout with Ground Bone, Ground Beef Bone, Beef, Beef Liver, Egg, Water, Gelatin, Dulse Powder, Dried Kelp, Ground Flaxseed, Organic Psyllium Husk Powder, Salmon Oil, Inulin, Potassium Chloride, Sodium Chloride, Taurine, Vitamin B Supplement, Copper Proteinate, Manganese Proteinate, Vitamin E Supplement, Mixed Tocopherols (as preservative), Vitamin D3 Supplement.',
         NorthwestNaturals3: '雞肉配方 凍乾貓糧',
@@ -353,7 +353,7 @@ export default {
         NorthwestNaturals50: 'Ingredients: Broccoli, Sweet Potato, Carrot, Lettuce, Apple, Cranberry and Blueberry.',
 
         rawzName: "RAWZ",
-        rawzDesc: 'RAWZ的首要目標是為寵物提供營養豐富的配方、盡可能地提供最接近天然的動物蛋白、而且使用天然成分代替經加工處理的食材。第二個目標是回饋，RAWZ承諾將全部利潤捐贈予三個主要範疇：提供服務犬、脊髓損傷和腦創傷。RAWZ為您的寵物提供不同的優質營養選擇，不使用肉粉、經熬煉的脂肪及商業用凝膠。RAWZ重視、關心所有寵物及寵物對我們生命的意義。',
+        rawzDesc: 'RAWZ’s first goal is to offer your pet nutritionally exceptional recipes that provide the highest meat content possible, utilizing natural alternatives to highly-processed ingredients. Our second goal is to give back, RAWZ pledged to donate 100% of the profits (after taxes and reserves) from RAWZ® to three main causes: providing service dogs, spinal cord injury and traumatic brain injury. RAWZ will provide your pet with a variety of quality nutritional options without the use of rendered meals, rendered fats or commercial gums. RAWZ cares about all pets and the meaningful impact they have on our lives',
         rawz1: "脫水雞肉、火雞肉及雞肉配方 全貓乾糧",
         rawz2: "Ingredients: Dehydrated Chicken, Dehydrated Deboned Chicken, Chicken, Turkey, Chicken Liver, Turkey Liver, Turkey Hearts, Pea Starch, Tapioca Starch, Dried Peas, Natural Chicken Flavor, Dried Egg Product, Flaxseeds, Dried Tomato Pomace, Salt, Choline Chloride, Potassium Chloride, dl-Methionine, Vitamins (Vitamin E Supplement, Niacin Supplement, d-Calcium Pantothenate, Vitamin A Acetate, Thiamine Mononitrate, Pyridoxine Hydrochloride, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement, Folic Acid), Minerals (Ferrous Sulfate, Zinc Oxide, Calcium Carbonate, Manganous Oxide, Copper Sulfate, Iron Amino Acid Chelate, Manganese Amino Acid Chelate, Zinc Amino Acid Chelate, Copper Amino Acid Chelate, Sodium Selenite, Cobalt Carbonate, Calcium Iodate), Mixed Tocopherols (Preservative), Taurine, Citric Acid (Preservative), Rosemary Extract",
         rawz3: "三文魚、脫水雞肉及白肉魚配方 全貓乾糧",
@@ -394,7 +394,7 @@ export default {
         rawz38: "Ingredients: Duck, Turkey, Turkey Broth, Turkey Liver, Quail, Tricalcium Phosphate, Fenugreek Seeds, Potassium Chloride, Choline Chloride, Salt, Taurine, Vegetable Broth, Iron Proteinate, Zinc Proteinate, Manganese Proteinate, Copper Proteinate, Sodium Selenite, Vitamin E Supplement, Thiamine Mononitrate, Niacin Supplement, Calcium Pantothenate, Biotin, Vitamin A Supplement, Riboflavin Supplement, Vitamin D3 Supplement, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Calcium Iodate, Folic Acid",
 
         NanoSanitasName: "NANO SANITAS",
-        NanoSanitasDesc: 'NanoSanitas™將多年來的轉化研究投放至新一代的全面寵物護理產品。NanoSanitas™的美容系列屢獲殊榮，經過精心設計達到納米級，不含防腐劑（例如：對羥基苯甲酸酯），力求滿足寵物的健康。NanoSanitas™是PLiN Nanotechnology SA — 一所專業生產納米材料的公司，所推出的副藥用寵物美容產品品牌。此優質系列有效地結合了納米材料（銀和金）以及來自大自然最純淨的成分。',
+        NanoSanitasDesc: 'NanoSanitas™ epitomizes years of translational research, in a new generation of holistic pet-care products. Our award-winning grooming line is carefully engineered down to the nano-scale, free of preservatives (e.g. parabens) and designed to cater to your pet’s wellbeing. NanoSanitas™ is a brand of para-pharmaceutical pet-grooming products, launched by PLiN Nanotechnology S.A., a company specializing in the production of nanomaterials. This premium line features an effective composition of nanomaterials (Silver and Gold), combined with nature’s purest ingredients.',
         NanoSanitas1: "Silver Lining納米銀技術頂尖口腔護理啫喱",
         NanoSanitas2: "Ingredients: Aqua (Water), Glycerin, Carbopol 947p Nf, Xanthan Gum, Betaine, Carica Papaya Fruit Extract, Ethyl Vanillin, Sodium Saccharin, Sodium Hydroxide, Methyl Salicylate, Silver Nanoparticles",
         NanoSanitas3: "長毛品種潔毛液 — 雄性專用配方",
@@ -413,7 +413,7 @@ export default {
         NanoSanitas16: "Ingredients: Cyclopentasiloxane, Dimethiconol, C12-15 Alkyl Benzoate, Silica Dimethyl Silylate, Argan Oil, Ethyl Ester of Hydrolyzed Silk, Parfum (fragrance), CI 77891, CI 77491, Synthetic fluorphlogopite, Triethoxycaprylylsilane, Gold Nanoparticles",
 
         northPawsName: "Corey",
-        northPawsDesc: 'Corey致力於寵物的福祉，所以Corey擁有自家廠房，嚴格控制寵物食品的一致性和安全性。Corey只會在加拿大廠房，並使用全天然、高品質的原材料，生產優質寵物食品。Corey承諾絕不外判生產過程 – 所有寵物食品均是在自家廠房製作。Corey Nutrition擁有歷史悠久的科學營養和嚴格的品質控制標準。而CoreyTEC™這項創新技術更提高了典型寵物食品的標準，確保提供新鮮及富含營養的食品給寵物，幫助牠們達到最佳的健康狀態。',
+        northPawsDesc: 'Corey committed to pets and their well-being. That’s why Corey had their own facilities, so they can control the consistency and safety of the pet food. Corey produce superior quality pet foods with all natural, high quality ingredients only in our Canadian facilities. Corey never outsource production — all the food is made in their own kitchen. Corey Nutrition has a long history of science-based nutrition and strict quality control standards. The CoreyTEC™ innovations raise the bar beyond typical pet foods, ensuring fresh, nutritious food for optimal health.',
         northPaws1: "無穀物 雞肉‧魚 全貓配方",
         northPaws2: "Ingredients: Chicken Meal, Fish Meal, Chicken Fat, Chickpeas, Sweet Potato, Red Lentils, Green Peas, Blueberries, Dried Brewer's Yeast, Flaxseed, Herring Oil, Limestone, Chicken Liver, Egg Powder, Kelp Meal, Lecithin, Calcium Propionate, DL-Methionine, Taurine, Salt, Choline Chloride, Yucca Schidigera Extract, Citric Acid, Zinc Sulfate, Ferrous Sulfate, Vitamin E Supplement, Kale, Chicory Root, Niacin, Copper Sulfate, L-Lysine Hydrochloride, Sodium Selenite, Thiamine Mononitrate, Manganese Sulfate, Glucosamine Hydrochloride, Chondroitin Sulfate, Calcium Iodate, Calcium Pantothenate, Vitamin A Supplement, Vitamin B-12 Supplement, Vitamin K Supplement, Riboflavin, Pyridoxine Hydrochloride, Biotin, Cobalt Carbonate, Folic Acid, Vitamin D-3 Supplement, Cranberries, Pumpkin, Spinach, Ginger, Peppermint, Chamomile, Turmeric, Celery Seed, Dried Rosemary",
         northPaws3: "無穀物 雞肉‧魚 老貓室內貓配方",
@@ -440,25 +440,25 @@ export default {
         proSeries10: "",
 
         catitName: "catit",
-        catitDesc: '昆蟲是一種優質蛋白來源，世界各地不同的文化都會被昆蟲豐富的營養及美味的味道所吸引。Catit Nuna結合昆蟲蛋白、雞肉或鯡魚及其他健康材料，為您的貓貓提供一個完整及難以抗拒的日常膳食。除了健康與美味外，昆蟲蛋白比農場飼養的動物更加環保。換句話來說，餵食Catit Nuna不但對貓貓有益，更對整個地球有好處。',
+        catitDesc: 'Insects are a great, high-quality protein source used by many different cultures around the world for their nutritional benefits and delicious taste. Catit Nuna combines insect protein with a tad of chicken or herring, along with other healthy ingredients, to offer your cat a complete and irresistible daily diet. In addition to being healthy and tasty, insect protein is also much more eco-friendly to produce than raising farm animals. In other words, feeding Catit Nuna is not just good for your cat but kind on the planet as well.',
         catit1: "低致敏‧無麩質‧昆蟲蛋白 雞肉味全貓配方",
         catit2: "Ingredients: Black soldier fly larvae, hydrolyzed yeast protein, millet, peas, lentils, chicken, sunflower oil (preserved with natural tocopherols), natural chicken flavor, flaxseeds, hulled sunflower seeds, dicalcium phosphate, calcium carbonate, dried whole egg product, DL-methionine, L-lysine, disodium phosphate, potassium chloride, choline chloride, salt, taurine, dried algae (natural source of DHA), niacin supplement, zinc proteinate, iron proteinate, L-ascorbyl-2-monophosphate (source of vitamin C), vitamin E supplement, rosemary extract, D-calcium pantothenate, riboflavin supplement, thiamine mononitrate, copper proteinate, manganese proteinate, vitamin A supplement, pyridoxine hydrochloride, folic acid, calcium iodate, sodium selenite, biotin, vitamin B12 supplement, vitamin D3 supplement",
         catit3: "低致敏‧無麩質‧昆蟲蛋白 鯡魚味全貓配方",
         catit4: "Ingredients: Black soldier fly larvae, hydrolyzed yeast protein, herring meal, millet, peas, lentils, sunflower oil (preserved with mixed tocopherols), natural chicken flavor, hulled sunflower seeds, flaxseeds, dried whole egg product, dicalcium phosphate, salt, calcium carbonate, dried algae (natural source of DHA), DL-methionine, L-lysine, potassium chloride, disodium phosphate, choline chloride, taurine, rosemary extract, niacin supplement, zinc proteinate, iron proteinate, L-ascorbyl-2-monophosphate (source of vitamin C), vitamin E supplement, D-calcium pantothenate, riboflavin supplement, thiamine mononitrate, copper proteinate, manganese proteinate, vitamin A supplement, pyridoxine hydrochloride, folic acid, calcium iodate, sodium selenite, biotin, vitamin B12 supplement, vitamin D3 supplement",
 
         vetwaterName: 'VETWATER (CATWATER & DOGWATER)',
-        vetwaterDesc: 'VETWATER成立於2018年，致力於開發和供應天然泉水產品，目的在預防寵物的泌尿問題，從而改善和延長寵物的生命。憑藉獨特的技術，VETWATER成為全球第一間透過泉水為寵物泌尿問題提供預防性解決方案的公司。VETWATER團隊由一班充滿熱情的動物愛好者組成，並共同在寵物食品行業中積累豐富經驗。',
+        vetwaterDesc: 'Founded in 2018, VETWATER develops and commercialises natural spring water-based products with the aim of preventing urinary problems in pets in order to improve and prolong their lives.Thanks to a unique process, VETWATER is the first company, worldwide, to offer a preventive solution to urinary problems in pets, through water.The VETWATER team is comprised of a group of passionate animal lovers, who together, cumulate a vast amount of experience in the pet food industry.',
         vetCatWater1: 'CATWATER 500m',
         vetCatWater2: 'Ingredients: Distilled Spring Water, Ozone, Sodium Hydroxide (NaOH)',
         vetCatWater3: 'CATWATER 4L',
         vetCatWater4: 'Ingredients: Distilled Spring Water, Ozone, Sodium Hydroxide (NaOH)',
-        vetDogWater1: 'DOGWATER-500ml',
+        vetDogWater1: 'DOGWATER 500ml',
         vetDogWater2: 'Ingredients: Distilled Spring Water, Ozone, Sodium Hydroxide (NaOH)',
-        vetDogWater3: ' DOGWATER-4L',
+        vetDogWater3: ' DOGWATER 4L',
         vetDogWater4: 'Ingredients: Distilled Spring Water, Ozone, Sodium Hydroxide (NaOH)',
 
         kohaName: 'KOHA',
-        kohaDesc: '減少使用添加劑及人工合成物！這就是晚餐…早餐和午餐所需要的。KOHA的狗食品和貓食品略去了所有不必要的「對您的寵物無益」的填充劑和添加劑，並堅持採用富含營養的食材和優質蛋白質。不含穀物、馬鈴薯、麩質及卡拉膠。而KOHA所有產品的第一成分均為肉類。',
+        kohaDesc: 'Clean Formulas! It’s what’s for dinner...and breakfast and lunch for that matter. Our Dog & Cat foods leave out all of the unnecessary “not good for your pet” fillers & additives and stick to nutrition and high-quality protein. No grains, no potatoes, no gluten and none of that pesky carrageenan. Did we mention meat is our #1 ingredient in all of our products. ',
         koha1: 'Pure Shreds Shredded Chicken Breast Entrée for Cats',
         koha2: 'Ingredients: Chicken Broth, Chicken, Pumpkin, Carrot, Sunflower Oil, Tapioca Starch, Tricalcium Phosphate, Guar Gum, Potassium Chloride, Salt, Choline Chloride, Taurine, Spinach, Magnesium Sulfate, Thiamine Mononitrate, Ferrous Sulfate, Vitamin E, Supplement, Niacin, Zinc Oxide, Vitamin A Supplement, Biotin, Vitamin B12 Supplement, Manganese Oxide, D-Calcium Pantothenate, Riboflavin, Copper Chelate, Sodium Selenite, Pyridoxine Hydrochloride, Folic Acid, Potassium Iodide, Vitamin D3 Supplement',
         koha3: 'Pure Shreds Shredded Chicken Breast & Duck Entrée for Cats',
@@ -487,7 +487,7 @@ export default {
         koha26: 'Ingredients: Elk, Venison, Ground Elk Bone, Ground Venison Bone, Dried Lactobacillus Acidophilus Fermentation Product, Dried Lactobacillus Lactis Fermentation Product, Dried Lactobacillus Plantarum Fermentation Product, Dried Bacillus Subtillis Fermentation Product, Dried Aspergillus Oryzae Fermentation Product, Vitamin E Supplement, Vitamin D3 Supplement, Mixed Tocopherols (Preservative)',
 
         BoatToBowlName: 'BOAT TO BOWL',
-        BoatToBowlDesc: 'BOAT To Bowl的配方適合對食物敏感、耐受不良或成分過敏的貓貓，因為配方中不含雞肉、雞肉脂肪、雞肉粉及任何其他動物蛋白。而且配方中更不含小麥、玉米、大豆及其他副產品。BOAT To Bowl只會選用優質的人類食用級數海魚，沒有任何腥味，所以您可以放心餵養。作為可持續發展努力的一分子，BOAT To Bowl致力於充分利用所捕獲的每一條魚來生產每一包貓糧，以確保貓貓在享用貓糧時能夠吸收到海魚的所有營養。',
+        BoatToBowlDesc: 'Our recipes are great for any pets with food allergies, intolerances or ingredient sensitivities, as they are formulated without chicken meat, chicken fat, chicken meal, or any other animal protein. Our recipes are also free of wheat, corn, soy or other by-products.We use only premium, human-grade fish. There is nothing fishy about our fish so you can be confident that you’re feeding your pet the same delectable fish you love to eat! As part of sustainability efforts, we are committed to the complete utilization of every fish harvested for Boat to Bowl pet food. Your pet benefits nutritionally from consuming the entire fish, which are properly cut and cooked before being used in our recipes.',
         BoatToBow1: "野生鱈魚、黑鱈魚‧成貓配方",
         BoatToBow2: "成分：鱈魚、黑鱈魚、三文魚茸、白魚茸、木薯澱粉、甘薯、葵花籽油（以混合生育酚作天然保存）、豌豆、鷹嘴豆、亞麻籽、阿拉斯加鱈魚油、天然香料、酵母萃取、益生菌、維他命（維他命E補充劑、維他命B3補 充劑、D-泛酸鈣、維他命A補充劑、核黃素補充劑、維他命B12補充劑、維他命B1、維他命B6、葉酸、維他命K）、鹽、牛磺酸、氯化膽鹼、DL-蛋氨酸、礦物質（蛋白鋅、蛋白鐵、蛋白銅、蛋白錳、亞硒酸鈉、碘酸鈣）、迷迭香萃取",
         BoatToBow3: "野生精選五種魚‧全貓配方",

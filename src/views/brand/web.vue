@@ -13,7 +13,7 @@
 		</div>
 		<div class="title">
 			<div></div>
-			{{$t('brand.brand1')}}<span>{{$t('brand.brand2')}}</span>
+			{{$t('brand.brand2')}}
 		</div>
 
 		<div class="con">
