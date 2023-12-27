@@ -1,6 +1,6 @@
 export default {
     head: {
-        head0: "HOME",
+        head0: "Main Page ",
         head1: "ABOUT US",
         head2: "NEWS",
         head3: "BRAND",
