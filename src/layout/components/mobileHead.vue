@@ -19,7 +19,7 @@
 			<div class="head-nav">
 				<div class="head-item" :class="index==navIndex?'active':''" v-for="(item,index) in navList"
 					@click="navBtn(index)" :key="index">
-                    <span v-if="index ==3||index ==4">+</span>
+					<span v-if="index ==3||index ==4">+</span>
 					{{ $t(item)}}
 				</div>
 
@@ -114,12 +114,12 @@
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 0)
 				}
-				if (["Northwest Naturals", "Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
+				if (["Northwest Naturals", "Northwest", "Naturals",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 1)
 				}
 
-				if (["RAWZ"].includes(inpValue)) {
+				if (["RAWZ", "rawz"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 2)
 				}
@@ -129,20 +129,20 @@
 					this.$store.commit('user/setBrandListIndex', 3)
 				}
 
-				if (["NWN",].includes(inpValue)) {
+				if (["Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 4)
 				}
-                    if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
-                        this.$router.push({ path: `/brandList` })
-                        this.$store.commit('user/setBrandListIndex', 5)
-                    }
+				if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
+					this.$router.push({ path: `/brandList` })
+					this.$store.commit('user/setBrandListIndex', 5)
+				}
 
 				if (["VETWATER (CATWATER & DOGWATER)", "VETWATER", "CATWATER", "DOGWATER"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 6)
 				}
-				if (["KOHA",].includes(inpValue)) {
+				if (["KOHA", "koha",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 7)
 				}
@@ -152,7 +152,7 @@
 				}
 				this.$store.commit('user/setNavIndex', 3);
 				this.inpValue = '';
-                this.mask=false
+				this.mask = false
 			}
 		}
 
@@ -172,7 +172,7 @@
 		background: #fff;
 	}
 	.head-log {
-		// 
+		//
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -198,7 +198,7 @@
 	}
 	.head-close {
 		padding: 40px 20px 24px;
-		// 
+		//
 		text-align: right;
 		img {
 			width: 16px;
@@ -213,29 +213,27 @@
 			min-width: 64px;
 			padding: 0 15px;
 			text-align: center;
-			// 
+			//
 
-            span {
-                margin-right: 20px;
-            }
+			span {
+				margin-right: 20px;
+			}
 		}
 		.active {
 			color: #066eb7;
 			font-weight: 600;
 		}
-        
 	}
-    .head-search {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	.head-search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.lang {
 		// padding: 14px 0 22px;
 		width: 24px;
 		height: 20px;
 		vertical-align: middle;
-		
 	}
 	.search {
 		position: relative;
@@ -260,12 +258,12 @@
 		.search-img {
 			margin-left: 6px;
 			height: 36px;
-            line-height: 36px;
+			line-height: 36px;
 			width: 45px;
 			text-align: center;
 			background: #606060;
 			border-radius: 5px;
-			
+
 			img {
 				width: 12px;
 				height: 12px;

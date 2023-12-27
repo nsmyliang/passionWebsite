@@ -12,7 +12,7 @@ export default {
         head8: "Northwest Naturals",
         head9: "RAWZ",
         head10: "NANO SANITAS",
-        head11: "North paw",
+        head11: "Corey",
         head12: "catit",
         head13: "VET WATER",
         head14: "RAWZ",

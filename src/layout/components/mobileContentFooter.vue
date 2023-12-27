@@ -2,8 +2,9 @@
 	<!-- 内容底部 -->
 	<div class="footer">
 		<!-- <img class="footer-icon" src="@/assets/image/mobile/home-footer.png"> -->
-		<div class="footer-share" @click="btn()">
-			<img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index">
+		<div class="footer-share">
+			<img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index"
+				@click="btn()">
 		</div>
 	</div>
 </template>

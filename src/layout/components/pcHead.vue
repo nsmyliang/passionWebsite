@@ -118,16 +118,17 @@
 
 			search() {
 				let inpValue = this.inpValue;
+
 				if (["Nutrience", "nutrience"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 0)
 				}
-				if (["Northwest Naturals", "Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
+				if (["Northwest Naturals", "Northwest", "Naturals",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 1)
 				}
 
-				if (["RAWZ"].includes(inpValue)) {
+				if (["RAWZ", "rawz"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 2)
 				}
@@ -137,20 +138,20 @@
 					this.$store.commit('user/setBrandListIndex', 3)
 				}
 
-				if (["NWN",].includes(inpValue)) {
+				if (["Corey (North paw & ProSeries)", "Corey", "North paw", "North", "paw", "ProSeries"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 4)
 				}
-                    if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
-                        this.$router.push({ path: `/brandList` })
-                        this.$store.commit('user/setBrandListIndex', 5)
-                    }
+				if (["catit NUNA", "catit", "NUNA",].includes(inpValue)) {
+					this.$router.push({ path: `/brandList` })
+					this.$store.commit('user/setBrandListIndex', 5)
+				}
 
 				if (["VETWATER (CATWATER & DOGWATER)", "VETWATER", "CATWATER", "DOGWATER"].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 6)
 				}
-				if (["KOHA",].includes(inpValue)) {
+				if (["KOHA", "koha",].includes(inpValue)) {
 					this.$router.push({ path: `/brandList` })
 					this.$store.commit('user/setBrandListIndex', 7)
 				}
@@ -159,7 +160,7 @@
 					this.$store.commit('user/setBrandListIndex', 8)
 				}
 				this.$store.commit('user/setNavIndex', 3);
-				this.inpValue = ''
+				this.inpValue = '';
 			}
 		}
 

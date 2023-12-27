@@ -1,14 +1,15 @@
 <template>
 	<!-- 内容底部 -->
-    <div class="footer">
-        <!-- <img src="@/assets/image/home-footer.png">
+	<div class="footer">
+		<!-- <img src="@/assets/image/home-footer.png">
         <div class="footer-txt">
             Copyright © 2023 MAXIPRO (ASIA) LIMITED. All Rights Reserve
         </div> -->
-        <div class="footer-share" @click="btn()">
-            <img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index">
-        </div>
-    </div>
+		<div class="footer-share">
+			<img :src="require(`@/assets/image/home-share${index+1}.png`)" v-for="(item,index) in 1" :key="index"
+				@click="btn()">
+		</div>
+	</div>
 </template>
 
 <script>
@@ -36,9 +37,9 @@
 		},
 		destroyed() { },
 		methods: {
-            btn(){
-                window.open("https://www.facebook.com/passionpetgroup", '_blank')
-            }
+			btn() {
+				window.open("https://www.facebook.com/passionpetgroup", '_blank')
+			}
 		}
 
 	};
@@ -67,14 +68,14 @@
 			}
 
 			.footer-share {
-                position: absolute;
-                left: 0;
-                top: 13px;
-                img {
-                    height: 30px;
-                    width: 30px;
-                    cursor: pointer;
-                }
+				position: absolute;
+				left: 0;
+				top: 13px;
+				img {
+					height: 30px;
+					width: 30px;
+					cursor: pointer;
+				}
 			}
 		}
 	}
