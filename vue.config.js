@@ -14,6 +14,7 @@ function resolve(dir) {
  */
 module.exports = {
   publicPath: './',
+  outputDir: 'passionWebsite',
   assetsDir: 'static',
   // 关闭eslint检查
   lintOnSave: isDevelopment,
