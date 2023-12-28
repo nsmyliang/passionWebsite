@@ -43,7 +43,7 @@
 		},
 		destroyed() { },
 		methods: {
-            
+
 		}
 
 	};
@@ -54,30 +54,29 @@
 		padding: 36px 17px 24px 17px;
 		text-align: center;
 		font-weight: 400;
-        font-size: 16px;
+		font-size: 16px;
 		color: #fff;
 		background: #066eb7;
 	}
 	.footer-txt {
 		display: flex;
-        flex-wrap: wrap;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		.footer-item {
-            width:150px;
-            text-align: center;
-            margin-top: 48px;
-			margin-right: 30px;
-			
-            &:first-child,&:nth-child(2) {
-                margin-top: 0;
-            }
-            &:nth-child(2n){
-                margin-right: 0;
-            }
+			width: 150px;
+			text-align: center;
+			margin-top: 48px;
+
+			&:first-child,
+			&:nth-child(2) {
+				margin-top: 0;
+			}
 		}
 	}
 
 	.footer-brand {
 		margin-top: 52px;
-        font-size: 14px;
+		font-size: 14px;
 	}
 </style>

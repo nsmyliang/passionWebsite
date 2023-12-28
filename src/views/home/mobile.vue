@@ -2,14 +2,14 @@
 	<div class="home">
 		<div class="banner">
 			<div class="swiper-container" id="swiper1">
-				<div class="swiper-wrapper" >
-					<div  class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
 						<div class="banner-item">
 							<img :src="require(`@/assets/image/home-banner${index}.png`)">
 						</div>
 					</div>
 				</div>
-                <div class="swiper-pagination"></div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 
@@ -36,15 +36,14 @@
 						<span>{{$t('home.home5')}}</span>
 					</div>
 				</div>
-				<div class="message-item" v-for="(item,index) in 2" :key="index" @click="toMessage()">
+				<div class="message-item" v-for="(item,index) in list" :key="index" @click="toMessage()">
 					<div class="message-con">
-						<div class="con-img"><img :src="require(`@/assets/image/home-message${index+1}.png`)"></div>
+						<div class="con-img"><img :src="require(`@/assets/image/message-banner${index}.png`)"></div>
 						<div class="con-con">
-							<div class="con-time">{{$t('home.home6')}}</div>
-							<div class="con-title">{{$t('home.home7')}}</div>
-							<div class="con-desc">{{$t('home.home8')}}</div>
+							<div class="con-time">{{$t(item.time)}}</div>
+							<div class="con-title">{{$t(item.title)}}</div>
+							<div class="con-desc">{{$t(item.desc)}}</div>
 						</div>
-
 					</div>
 					<div class="con-btn">
 						{{$t('home.home9')}}
@@ -58,16 +57,16 @@
 				</div>
 				<div class="product-name">{{$t('home.home12')}}</div>
 				<div class="product-img">
-                    <div class="swiper-container" id="swiper2">
-                        <div class="swiper-wrapper" >
-                            <div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
-                                <div class="banner-item">
-                                    <img :src="require(`@/assets/image/home-product${index}.png`)">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
+					<div class="swiper-container" id="swiper2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide single-swiper" v-for="(item, index) of 3" :key="index">
+								<div class="banner-item">
+									<img :src="require(`@/assets/image/home-product${index}.png`)">
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -88,7 +87,19 @@
 		data() {
 
 			return {
-                productIndex:0
+				productIndex: 0,
+				list: [
+					{
+						time: 'message.message4',
+						title: 'message.message11',
+						desc: 'message.message12'
+					},
+					{
+						time: 'message.message4',
+						title: 'message.message13',
+						desc: 'message.message14'
+					}
+				]
 			};
 		},
 
@@ -98,7 +109,7 @@
 		mounted() {
 			this.$nextTick(() => {
 				this.initSwiper()
-                this.initSwiper1()
+				this.initSwiper1()
 			})
 		},
 		methods: {
@@ -185,13 +196,12 @@
 
 <style lang="scss" scoped>
 	.home {
-		padding: 0 20px;
-        
+		padding: 0 15px;
+
 		.banner {
 			text-align: center;
 			img {
-				width: 335px;
-				height: 160px;
+				width: 100%;
 			}
 		}
 		.content {
@@ -214,18 +224,13 @@
 				}
 				.brand-list {
 					display: flex;
-					flex-flow: wrap;
+					flex-wrap: wrap;
+					justify-content: space-between;
 					.brand-item {
-						
-						margin-right: 19px;
-                        margin-top: 20px;
-                        &:nth-child(2n) {
-                            margin-right: 0px;
-                        }
-                        img {
-                            width: 158px;
-                            height: 68px;
-                        }
+						margin-top: 20px;
+						img {
+							width: 150px;
+						}
 					}
 				}
 			}
@@ -271,14 +276,13 @@
 							text-align: center;
 							display: block;
 							background: #525252;
-							
 						}
 					}
 				}
 				.message-item {
 					margin-top: 17px;
 					border-bottom: 1px dashed rgba(209, 209, 209, 1);
-					
+
 					.message-con {
 						display: flex;
 						align-items: center;
@@ -371,7 +375,7 @@
 		justify-content: center;
 	}
 	::v-deep .swiper-pagination-bullet {
-		background: #D8D8D8;
+		background: #d8d8d8;
 		opacity: 1;
 		width: 7px;
 		height: 7px;
@@ -380,7 +384,7 @@
 	::v-deep .swiper-pagination-bullet-active {
 		width: 7px;
 		height: 7px;
-		
-        background: #fff;
+
+		background: #fff;
 	}
 </style>

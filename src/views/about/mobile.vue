@@ -56,11 +56,11 @@
 
 <style lang="scss" scoped>
 	.about {
-		padding: 12px 24px;
+		padding: 12px 15px;
 		.banner {
 			text-align: center;
 			img {
-				width: 366px;
+				width: 100%;
 			}
 		}
 		.con {
@@ -89,7 +89,7 @@
 					margin-top: 24px;
 					margin-left: 10px;
 					height: 1px;
-					width: 180px;
+					width: 150px;
 					background: rgba(209, 209, 209, 1);
 				}
 			}

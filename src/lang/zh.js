@@ -55,7 +55,7 @@ export default {
         message1: "最新",
         message2: "消息",
         message3: "All Posts",
-        message4: "2023年10月8日",
+        message4: "29 Jun 2023",
         message5: "分钟",
         message6: "香港宠物节2022",
         message7: "由展览集团主办的「香港宠物节2022」即将于来年（2022年）2月举办，请各位宠物家长注意！",

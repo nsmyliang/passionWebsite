@@ -104,7 +104,7 @@
 <style lang="scss" scoped>
 	.connection {
 		background: #fff;
-		padding: 12px 24px 28px 24px;
+		padding: 12px 15px 28px 15px;
 		margin: auto;
 		.mask{
 			.mask-cont{

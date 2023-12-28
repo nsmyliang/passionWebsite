@@ -14,8 +14,8 @@
 			</div>
 
 			<div class="con-list">
-				<div class="list-item" v-for="(item,index) in list " :key="index"  @click="toMessageDetail(index)">
-					<div class="list-left" >
+				<div class="list-item" v-for="(item,index) in list " :key="index" @click="toMessageDetail(index)">
+					<div class="list-left">
 						<img :src="require(`@/assets/image/message-banner${index}.png`)">
 					</div>
 
@@ -62,24 +62,24 @@
 		data() {
 
 			return {
-                list:[
-                    {
-                        title:'message.message11',
-                        txt:'message.message12'
-                    },
-                    {
-                        title:'message.message13',
-                        txt:'message.message14'
-                    },
-                    {
-                        title:'message.message15',
-                        txt:'message.message16'
-                    },
-                    {
-                        title:'message.message17',
-                        txt:'message.message18'
-                    },
-                ]
+				list: [
+					{
+						title: 'message.message11',
+						txt: 'message.message12'
+					},
+					{
+						title: 'message.message13',
+						txt: 'message.message14'
+					},
+					{
+						title: 'message.message15',
+						txt: 'message.message16'
+					},
+					{
+						title: 'message.message17',
+						txt: 'message.message18'
+					},
+				]
 			};
 		},
 
@@ -108,7 +108,7 @@
 			line-height: 48px;
 			font-weight: 600;
 			color: #525252;
-			padding: 12px 20px 16px;
+			padding: 12px 15px 16px;
 			div {
 				width: 11px;
 				height: 34px;
@@ -133,7 +133,6 @@
 					color: #ffffff;
 				}
 				.title-search {
-					
 					img {
 						height: 14px;
 						width: 14px;
@@ -143,18 +142,15 @@
 
 			.con-list {
 				.list-item {
-
 					.list-left {
 						img {
-							width: 375px;
+							width: 100%;
 							height: 200px;
 							display: block;
 						}
 					}
 					.list-right {
-						
-
-						margin: 25px 20px 0 20px;
+						margin: 25px 15px 0 15px;
 						font-weight: 400;
 						color: #353535;
 						border-bottom: 1px solid rgba(202, 202, 202, 1);
@@ -174,7 +170,7 @@
 								.info-txt {
 									margin-left: 9px;
 									font-size: 12px;
-									
+
 									img {
 										width: 9px;
 										height: 15px;
@@ -183,7 +179,6 @@
 							}
 
 							.head-img {
-								
 								img {
 									width: 3px;
 									height: 13px;
@@ -204,7 +199,7 @@
 						}
 						.right-bottom {
 							margin-top: 30px;
-                            padding-bottom: 27px;
+							padding-bottom: 27px;
 							display: flex;
 							align-items: center;
 							justify-content: space-between;

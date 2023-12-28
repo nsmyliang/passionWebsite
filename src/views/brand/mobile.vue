@@ -41,47 +41,47 @@
 					{
 						imgUrl: 'brand-logo1',
 						txt: 'Nutrience',
-                        index:0,
+						index: 0,
 					},
 					{
 						imgUrl: 'brand-logo2',
 						txt: 'Northwest Naturals',
-                        index:1,
+						index: 1,
 					},
 					{
 						imgUrl: 'brand-logo3',
 						txt: 'RAWZ',
-                        index:2,
+						index: 2,
 					},
 					{
 						imgUrl: 'brand-logo4',
 						txt: 'NANO SANITAS',
-                        index:3,
+						index: 3,
 					},
 					{
 						imgUrl: 'brand-logo5',
 						txt: 'North paw',
-                        index:4,
+						index: 4,
 					},
 					{
 						imgUrl: 'brand-logo7',
 						txt: 'catit',
-                        index:5,
+						index: 5,
 					},
 					{
 						imgUrl: 'brand-logo8',
 						txt: 'VET WATER',
-                        index:6,
+						index: 6,
 					},
 					{
 						imgUrl: 'brand-logo9',
 						txt: 'KOHA',
-                        index:7,
+						index: 7,
 					},
 					{
 						imgUrl: 'brand-logo10',
 						txt: 'BOAT TO BOWL',
-                        index:8,
+						index: 8,
 					},
 				],
 				currentSwiper: null,
@@ -119,7 +119,7 @@
 				let vueComponent = this //获取vue组件实例
 				this.currentSwiper = new Swiper('.swiper-container', {
 					noSwiping: true,
-                    noSwipingClass: '.swiper-container',
+					noSwipingClass: '.swiper-container',
 					loop: true, // 循环模式选项
 					autoHeight: 'true', //开启自适应高度,容器高度由slide高度决定
 					transitionDuration: 3000,
@@ -127,13 +127,13 @@
 
 					autoplay: {
 						delay: 3000,
-                        disableOnInteraction: false,
+						disableOnInteraction: false,
 					},
 					pagination: {
 						el: '.swiper-pagination',
 						clickable: true,
-					}, 
-                    effect: 'fade',
+					},
+					effect: 'fade',
 					fadeEffect: {
 						crossFade: true,
 					},
@@ -164,19 +164,18 @@
 </script>
 <style lang="scss" scoped>
 	.brand {
-        padding-bottom: 30px;
+		padding-bottom: 30px;
 		overflow-x: hidden;
 		// background: #f0f0f0;
 		.banner {
-            max-height: 104px;
-			width: 100%;
-            text-align: center;
-            img {
-                 max-height: 104px;
-            }
+			padding: 0 15px;
+			text-align: center;
+			img {
+				width: 100%;
+			}
 		}
 		.title {
-			margin: 20px 24px 0;
+			margin: 20px 15px 0;
 			display: flex;
 			align-items: center;
 			font-size: 24px;
@@ -196,24 +195,19 @@
 			}
 		}
 		.con {
-            padding: 0 24px;
+			padding: 0 15px;
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
 			.con-item {
 				margin-top: 30px;
-				margin-right: 11px;
 				text-align: center;
 
-				&:nth-child(2n) {
-					margin-right: 0;
-				}
-
 				.item-img {
-					width: 158px;
-					height: 96px;
+					width: 150px;
 				}
 				.item-txt {
-                    width: 152px;
+					width: 152px;
 					font-size: 16px;
 					color: #066eb7;
 					font-weight: 600;
@@ -227,7 +221,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	} 
+	}
 	::v-deep .swiper-pagination-bullet {
 		background: #fff;
 		opacity: 1;

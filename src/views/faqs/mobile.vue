@@ -44,7 +44,7 @@
 
 <style lang="scss" scoped>
 	.faq {
-		padding: 12px 24px 28px 24px;
+		padding: 0px 15px 28px 15px;
 		background: url('@/assets/image/mobile/FAQBg.png');
         background-size: cover;
 		.title {

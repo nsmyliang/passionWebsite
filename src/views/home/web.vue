@@ -37,14 +37,13 @@
 						<span>{{$t('home.home5')}}</span>
 					</div>
 				</div>
-				<div class="message-item" v-for="(item,index) in 2" :key="index" @click="toMessage()">
+				<div class="message-item" v-for="(item,index) in list" :key="index" @click="toMessage()">
 					<div class="message-con">
-
-						<div class="con-img"><img :src="require(`@/assets/image/home-message${index+1}.png`)"></div>
+						<div class="con-img"><img :src="require(`@/assets/image/message-banner${index}.png`)"></div>
 						<div class="con-con">
-							<div class="con-time">{{$t('home.home6')}}</div>
-							<div class="con-title">{{$t('home.home7')}}</div>
-							<div class="con-desc">{{$t('home.home8')}}</div>
+							<div class="con-time">{{$t(item.time)}}</div>
+							<div class="con-title">{{$t(item.title)}}</div>
+							<div class="con-desc">{{$t(item.desc)}}</div>
 						</div>
 					</div>
 					<div class="con-btn">
@@ -84,7 +83,19 @@
 		data() {
 
 			return {
-				productIndex: 0
+				productIndex: 0,
+				list: [
+					{
+						time: 'message.message4',
+						title: 'message.message11',
+						desc: 'message.message12'
+					},
+					{
+						time: 'message.message4',
+						title: 'message.message13',
+						desc: 'message.message14'
+					}
+				]
 			};
 		},
 

@@ -101,24 +101,19 @@
 			margin-top:40px;
 		}
 		.con {
-            padding: 0 24px;
+			padding: 0 15px;
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: space-between;
 			.con-item {
 				margin-top: 30px;
-				margin-right: 11px;
 				text-align: center;
 
-				&:nth-child(2n) {
-					margin-right: 0;
-				}
-
 				.item-img {
-					width: 158px;
-					height: 68px;
+					width: 150px;
 				}
 				.item-txt {
-                    width: 152px;
+					width: 152px;
 					font-size: 16px;
 					color: #066eb7;
 					font-weight: 600;

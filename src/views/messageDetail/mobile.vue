@@ -124,7 +124,7 @@
 	.messageDetail {
         margin-bottom: 30px;
 		.title {
-			padding: 18px 20px;
+			padding: 18px 15px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -200,7 +200,7 @@
 			.con-banner {
 				margin-top: 16px;
 				img {
-					width: 375px;
+					width: 100%;
 					height: 200px;
 					display: block;
 				}
