@@ -786,7 +786,7 @@
 			.con-con {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
-				gap: 20px 20px;
+				gap: 15px 15px;
 			}
 
 			.con-item {
