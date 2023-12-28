@@ -63,15 +63,11 @@
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: space-between;
+        margin-top: -48px;
 		.footer-item {
 			width: 150px;
 			text-align: center;
 			margin-top: 48px;
-
-			&:first-child,
-			&:nth-child(2) {
-				margin-top: 0;
-			}
 		}
 	}
 
