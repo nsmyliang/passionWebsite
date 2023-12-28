@@ -784,23 +784,16 @@
 				font-weight: 600;
 			}
 			.con-con {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-                margin-right: -20px;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px 20px;
 			}
 
 			.con-item {
-				margin-top: 20px;
-                margin-right: 20px;
+
 				border-radius: 5px;
 				background: #ffffff;
-				flex: 1;
-				
 
-                // &:nth-child(2n) {
-                //     margin-right: 0;
-                // }
 
 				.item-img {
 					border-radius: 5px;
